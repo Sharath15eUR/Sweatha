@@ -1,0 +1,7 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ip route
+default via 192.168.1.1 dev wlp1s0 proto dhcp src 192.168.1.36 metric 600 
+192.168.1.0/24 dev wlp1s0 proto kernel scope link src 192.168.1.36 metric 600 
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ip route | grep default
+default via 192.168.1.1 dev wlp1s0 proto dhcp src 192.168.1.36 metric 600 
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ip route | grep default |awk '{print $3}'|sort -u
+192.168.1.1
