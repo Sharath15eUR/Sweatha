@@ -1,0 +1,4 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ touch file1
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ chmod a+x file1
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ls -l file1
+-rwxrwxr-x 1 sweatha sweatha 0 Jan 22 11:33 file1
