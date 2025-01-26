@@ -1,5 +1,0 @@
-sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ touch file2
-sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ chmod g-w file2
-sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ls -l file2
--rw-r--r-- 1 sweatha sweatha 0 Jan 22 11:41 file2
-
