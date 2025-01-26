@@ -1,0 +1,4 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ PID_VAR=$(ps aux --sort -%mem |awk 'NR==2 {print $2}')
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ echo $PID_VAR
+31074
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ kill $PID_VAR
