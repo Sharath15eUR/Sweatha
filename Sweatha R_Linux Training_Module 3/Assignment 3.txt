@@ -1,0 +1,11 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 3$ vim backup_manager.sh 
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 3$ ./backup_manager.sh "/home/sweatha/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 3/Source_dir" "/home/sweatha/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 3/Dest_dir" ".txt"
+sample1.txt - 40 bytes
+sample2.txt - 46 bytes
+sample3.txt - 28 bytes
+Back up summary REPORT FILE
+TOTAL FILES: 3
+TOTAL SIZE: 114
+Path to Backup dir: /home/sweatha/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 3/Dest_dir
+
