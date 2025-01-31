@@ -1,0 +1,5 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 4$ vim fetch_params.sh
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 4$ ./fetch_params.sh input.txt 
+Parameters have been fetched and moved to op file op.txt
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 4$ wc -l op.txt 
+9672 op.txt
