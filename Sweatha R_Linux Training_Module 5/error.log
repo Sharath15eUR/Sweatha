@@ -1,0 +1,16 @@
+Error :Cannot have both dir and file at the same time
+Error :Invalid inputs -f , dir1
+Error :Invalid inputs -f , file
+Error :Invalid inputs -f , file
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid inputs -f , file
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid inputs -f , file
+Error :Cannot have both dir and file at the same time
+Error :Invalid keyword
+Error :Invalid inputs -f , file
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid inputs -f , file1.txt

@@ -1,0 +1,5 @@
+[INFO] Application started successfully.
+[WARNING] Low memory detected.
+[ERROR] Failed to connect to the database.
+[DEBUG] Retrying connection...
+

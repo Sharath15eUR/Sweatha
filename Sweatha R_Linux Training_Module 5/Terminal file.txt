@@ -1,0 +1,71 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ vim file_analyzer.sh
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ chmod 777 file_analyzer.sh 
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -d dir1 -k ERROR
+match found
+match found
+Script name:./file_analyzer.sh
+Tot Arg:4
+Exit code of prev cmd:0
+All arg:-d dir1 -k ERROR
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -f file.txt -k ERROR
+Keyword ERROR found in file file.txt
+Script name:./file_analyzer.sh
+Tot Arg:4
+Exit code of prev cmd:0
+All arg:-f file.txt -k ERROR
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -d dir1 -k TODO
+match found
+match found
+Script name:./file_analyzer.sh
+Tot Arg:4
+Exit code of prev cmd:0
+All arg:-d dir1 -k TODO
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh --help
+Usage:  [options]
+
+Options:
+  -d <directory>   Search for keyword in files in the specified directory and subdirectories.
+  -k <keyword>     Keyword to search for in the files.
+  -f <file>        Search for keyword in the specified file.
+  --help           Display this help menu.
+
+Examples:
+  ./file_analyzer.sh -d logs -k error    Search for the keyword "error" in the logs directory and its subdirectories.
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -f file -d dir1
+Error :Cannot have both dir and file at the same time
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -f file
+Error :Invalid keyword
+Error :Invalid inputs -f , file
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -f file -k
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ ./file_analyzer.sh -f file1.txt -k ERROR 
+file1.txt does not exist
+Error :Invalid inputs -f , file1.txt
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop/EmbedUR_Linux_Assignments/Sweatha R_Linux Training_Module 5$ cat error.log 
+Error :Cannot have both dir and file at the same time
+Error :Invalid inputs -f , dir1
+Error :Invalid inputs -f , file
+Error :Invalid inputs -f , file
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid inputs -f , file
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid inputs -f , file
+Error :Cannot have both dir and file at the same time
+Error :Invalid keyword
+Error :Invalid inputs -f , file
+Error :Invalid input check usage by giving ./file_analyzer.sh --help
+Error :Invalid inputs -f , file1.txt
+
