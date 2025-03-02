@@ -1,0 +1,55 @@
+CONNECTING TO A REMOTE MACHINE :
+
+We can connect to remote machines through ssh or telnet . 
+
+SSH (secure shell) :
+->It is used to connect to a remote system securely over the internet
+->It encrypts our data over the internet so that the privacy of data is ensured
+->It uses public key for authentication and it is not easy to decrypt the data in ssh
+->It uses the port 22 , but it can be customized
+->It is used in modern systems mostly because of it's secured transmission of data to the remote system.
+->It prevents the attackers from hacking or spoofing the data during transmission.
+
+HOW TO CONNECT USING SSH : 
+
+->ssh usernae@remote_ip
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ssh sweatha@192.168.1.39
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+171 updates can be applied immediately.
+61 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+8 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Mon Sep 23 13:51:29 2024 from 127.0.0.1
+
+
+
+->if it runs on df port other than 22 :
+ssh -p 222 sweatha@192.168.1.10
+
+
+
+Telnet (Telecommunications and  Network ) :
+->It is also used to connect to a remote system
+->But it does not do any encryption on the data we are transmitting . It is open to public , easily to hack
+->No security is provided to the data
+->It is an older method of connecting to a remote system
+->It runs on port 23
+
+
+HOW TO CONNECT USING TELNET : 
+
+->telent remote_ip
+telnet 192.168.1.39
+
+->if it runs on df port : telent remote_ip port_num
+telnet 192.168.1.39 223

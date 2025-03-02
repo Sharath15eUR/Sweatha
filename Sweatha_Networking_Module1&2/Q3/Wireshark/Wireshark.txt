@@ -1,0 +1,20 @@
+Wireshark :
+-> It is a tool used to capture and analyze the packets .
+->After downloading , you can choose the interface of yours to packet capture and analyzing
+->In my case , i have wlp1s0
+->After choosing the interface, you can click start capturea and go and search for something in web browser to crate some network traffic
+->You can see the wireshark capturing the packets in real time. Click stop to finish capturing packets
+->You can use filters , like :
+1)HTTP
+http
+
+2)TCP
+tcp
+
+3)ONLY A  SPECIFIC IP ADDR
+ip.addr==192.168.1.39
+
+4)ONLY A SPECIFIC PORT
+tcp.port==80
+
+These are the filters used to analyze the captured packets . It will be useful to check if there is any n/w issue or latency or traffic. It gives detailed info on packets size,timestamp,ip information of source and destination , protocols used etc.

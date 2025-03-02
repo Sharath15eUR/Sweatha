@@ -1,0 +1,7 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ arp -a
+_gateway (192.168.1.1) at 54:47:e8:7f:f7:4e [ether] on wlp1s0
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ arp -a|grep 192.168.1.1
+_gateway (192.168.1.1) at 54:47:e8:7f:f7:4e [ether] on wlp1s0
+
+

@@ -1,0 +1,31 @@
+REMOTE CONNECTIONS :
+
+1) VNC- Virtual network computing
+
+->Used to connect to remote system
+->Requires manual set up by the user , should give a vncpassword while starting the server for first time
+->Should have vnc server and vnc viewer (from realvnc website)installed on the computers to provide access and to view the other system.The viewer have to put the server password after giving the remote ip that they want to connect.
+->It has a criteria that it should be connected to a same lan or wifi network
+->Otherwise it should'nt work , requires the user to provide a public ip for their system and can connecr over different networks
+->But it is less secure since no encryption is done only the password is there to protect data , if password is not strong then the data is not secured 
+->It is compatible in  windows,linux,mac 
+
+
+2)Anydesk,Teamviewer
+
+->apps used to connect remotely
+->more easy set up
+->Automatic id generation for system
+->no need of common lan , works on internet
+->The viewer has to put the remote id and wait for the other to accept and if they wish they can set a password too
+->Compatible for windows,linux,mac
+->It uses AES(more secured than VNC)
+
+3)RDC - remote desktop connection
+
+->Built in tool in windows
+->Very much secured and configured
+->Need a common lan or wifi
+->Only compatible with windows and secured one
+
+We can use these kind of tools to remotely log in and work from the local laptop.

@@ -1,0 +1,25 @@
+Duplicate IP address conflict :
+It is a condition where 2 devices have same ip address assigned to them .
+
+Duplicate ip conflicts arise in 2 situations mostly :
+1. When two devices are statically (manually) assigned the same ip 
+2.When the same ip which is manually assigned is also there in the DHCP pool , so when a device boots and gets the same ip from the pool duplicate ip conflict occurs
+
+WHAT HAPPENS IN THOSE SITUATIONS?
+1.The devices might have network connectivity issues and the network traffic will get disturbed and the routers will disable one of the devices  
+2.The device might have connectivity issues and dhcp server generates an error meanwhile rejecting its request , then the device will request ip continuosly 
+
+
+HOW CAN WE CHECK IF TEHRE IS A DUPLICATE IP CONFLICT IN OUR SYSTEM ?
+->Use arp -a 
+If same mac addr is assigned to multiple ip's then there is a conflict
+->ifconfig or ip addr show
+If you see ip address conflict in the report, then you have to resolve that.
+->Use ping
+You can manually assign same ip in 2 devices using ifconfig for an interface and then ping that ip from a third device , you will be able to see a conflict
+
+
+SOLUTION:
+->restart the system - when the device boots it request for another ip to dhcp server so the error gets solved
+-> manually change the ip address which is same
+

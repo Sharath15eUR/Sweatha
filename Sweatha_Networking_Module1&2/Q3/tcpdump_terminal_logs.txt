@@ -1,0 +1,62 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo tcpdump -c 10 -i wlp1s0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlp1s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+11:38:56.431967 IP 192.168.1.44.mdns > mdns.mcast.net.mdns: 1 [5q] PTR (QU)? _%9E5E7C8F47989526C9BCD95D24084F6F0B27C5ED._sub._googlecast._tcp.local. PTR (QU)? _674A0243._sub._googlecast._tcp.local. PTR (QU)? _CFE7FEDA._sub._googlecast._tcp.local. PTR (QU)? _8E6C866D._sub._googlecast._tcp.local. PTR (QU)? _googlecast._tcp.local. (142)
+11:38:56.527157 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.36774 > multiplay.bsnl.in.domain: 52942+ [1au] PTR? 251.0.0.224.in-addr.arpa. (53)
+11:38:56.546355 IP multiplay.bsnl.in.domain > sweatha-HP-Pavilion-Laptop-15-eg2xxx.36774: 52942 1/4/1 PTR mdns.mcast.net. (168)
+11:38:56.548940 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.51917 > multiplay.bsnl.in.domain: 57581+ [1au] PTR? 44.1.168.192.in-addr.arpa. (54)
+11:38:56.569428 IP multiplay.bsnl.in.domain > sweatha-HP-Pavilion-Laptop-15-eg2xxx.51917: 57581 NXDomain 0/1/1 (131)
+11:38:56.631581 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.42895 > multiplay.bsnl.in.domain: 53563+ [1au] PTR? 39.1.168.192.in-addr.arpa. (54)
+11:38:56.788747 IP multiplay.bsnl.in.domain > sweatha-HP-Pavilion-Laptop-15-eg2xxx.42895: 53563 NXDomain 0/1/1 (131)
+11:38:56.824554 ARP, Request who-has 192.168.1.40 tell 192.168.1.44, length 28
+11:38:56.838559 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.48531 > multiplay.bsnl.in.domain: 32747+ [1au] PTR? 40.1.168.192.in-addr.arpa. (54)
+11:38:56.856105 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.60104 > a184-51-195-147.deploy.static.akamaitechnologies.com.https: Flags [P.], seq 501996838:501996877, ack 168872122, win 850, options [nop,nop,TS val 3432824839 ecr 2858484199], length 39
+10 packets captured
+14 packets received by filter
+0 packets dropped by kernel
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo tcpdump -c 10 -i wlp1s0 src 192.168.1.39
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlp1s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+11:42:30.567435 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.41962 > 93.243.107.34.bc.googleusercontent.com.https: Flags [.], ack 1862077401, win 494, options [nop,nop,TS val 3609880963 ecr 1902545244], length 0
+11:42:30.567941 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.41962 > 93.243.107.34.bc.googleusercontent.com.https: Flags [P.], seq 0:28, ack 1, win 494, options [nop,nop,TS val 3609880964 ecr 1902545244], length 28
+11:42:30.647222 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.52911 > multiplay.bsnl.in.domain: 29134+ [1au] PTR? 93.243.107.34.in-addr.arpa. (55)
+11:42:30.774832 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.44804 > multiplay.bsnl.in.domain: 48582+ [1au] PTR? 39.1.168.192.in-addr.arpa. (54)
+11:42:36.028716 ARP, Request who-has _gateway tell sweatha-HP-Pavilion-Laptop-15-eg2xxx, length 28
+11:42:36.054054 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.47909 > multiplay.bsnl.in.domain: 42515+ [1au] PTR? 1.1.168.192.in-addr.arpa. (53)
+11:42:59.636505 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.35867 > multiplay.bsnl.in.domain: 21538+ [1au] HTTPS? ab.chatgpt.com. (43)
+11:42:59.636738 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.35927 > multiplay.bsnl.in.domain: 28199+ [1au] A? ab.chatgpt.com. (43)
+11:42:59.636890 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.49396 > multiplay.bsnl.in.domain: 5470+ [1au] AAAA? ab.chatgpt.com. (43)
+11:42:59.673483 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.40370 > 104.18.32.47.https: Flags [S], seq 2198628093, win 64240, options [mss 1460,sackOK,TS val 3353676985 ecr 0,nop,wscale 7], length 0
+10 packets captured
+29 packets received by filter
+0 packets dropped by kernel
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo tcpdump -c 5 -i wlp1s0 port 80
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlp1s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+11:44:59.609946 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.50634 > fracktail.canonical.com.http: Flags [S], seq 4180861719, win 64240, options [mss 1460,sackOK,TS val 2308693067 ecr 0,nop,wscale 7], length 0
+11:44:59.989033 IP fracktail.canonical.com.http > sweatha-HP-Pavilion-Laptop-15-eg2xxx.50634: Flags [S.], seq 3783389751, ack 4180861720, win 65160, options [mss 1400,sackOK,TS val 3092320896 ecr 2308693067,nop,wscale 14], length 0
+11:44:59.989092 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.50634 > fracktail.canonical.com.http: Flags [.], ack 1, win 502, options [nop,nop,TS val 2308693446 ecr 3092320896], length 0
+11:44:59.989319 IP sweatha-HP-Pavilion-Laptop-15-eg2xxx.50634 > fracktail.canonical.com.http: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS val 2308693446 ecr 3092320896], length 88: HTTP: GET / HTTP/1.1
+11:45:00.207735 IP fracktail.canonical.com.http > sweatha-HP-Pavilion-Laptop-15-eg2xxx.50634: Flags [P.], seq 1:190, ack 89, win 4, options [nop,nop,TS val 3092321272 ecr 2308693446], length 189: HTTP: HTTP/1.1 204 No Content
+5 packets captured
+8 packets received by filter
+0 packets dropped by kernel
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo tcpdump -c 5 -i wlp1s0 -w pckts.pcap
+tcpdump: listening on wlp1s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+5 packets captured
+271 packets received by filter
+0 packets dropped by kernel
+
+

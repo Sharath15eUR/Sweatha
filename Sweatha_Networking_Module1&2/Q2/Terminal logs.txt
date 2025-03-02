@@ -1,0 +1,193 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo apt install vsftpd -y
+[sudo] password for sweatha: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  python3-netifaces
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  vsftpd
+0 upgraded, 1 newly installed, 0 to remove and 92 not upgraded.
+Need to get 120 kB of archives.
+After this operation, 312 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 vsftpd amd64 3.0.5-0ubuntu3.1 [120 kB]
+Fetched 120 kB in 3s (40.0 kB/s)                       
+Preconfiguring packages ...
+Selecting previously unselected package vsftpd.
+(Reading database ... 231790 files and directories currently installed.)
+Preparing to unpack .../vsftpd_3.0.5-0ubuntu3.1_amd64.deb ...
+Unpacking vsftpd (3.0.5-0ubuntu3.1) ...
+Setting up vsftpd (3.0.5-0ubuntu3.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/vsftpd.service → /usr/lib/systemd/system/vsftpd.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+
+--------------------------------------------------------------------------------------------------
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo nano /etc/vsftpd.conf 
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo systemctl restart vsftpd
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo systemctl enable vsftpd
+Synchronizing state of vsftpd.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable vsftpd
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo ufw allow 21/tcp
+Rules updated
+Rules updated (v6)
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo adduser ftpuser
+info: Adding user `ftpuser' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `ftpuser' (1002) ...
+info: Adding new user `ftpuser' (1002) with group `ftpuser (1002)' ...
+info: Creating home directory `/home/ftpuser' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it is too simplistic/systematic
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for ftpuser
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+info: Adding new user `ftpuser' to supplemental / extra groups `users' ...
+info: Adding user `ftpuser' to group `users' ...
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ftp 192.168.1.39
+Connected to 192.168.1.39.
+220 (vsFTPd 3.0.5)
+Name (192.168.1.39:sweatha): ftpuser
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> put rough
+rough.sh	rough.txt	rough1.txt	rough2.txt
+ftp> put rough.txt 
+local: rough.txt remote: rough.txt
+229 Entering Extended Passive Mode (|||12113|)
+150 Ok to send data.
+100% |*******************************************************************************************************************************************|   429       19.26 KiB/s    00:00 ETA
+226 Transfer complete.
+429 bytes sent in 00:00 (18.83 KiB/s)
+ftp> get rough.sh
+local: rough.sh remote: rough.sh
+229 Entering Extended Passive Mode (|||7946|)
+550 Failed to open file.
+ftp> get rough.txt
+local: rough.txt remote: rough.txt
+229 Entering Extended Passive Mode (|||61874|)
+150 Opening BINARY mode data connection for rough.txt (429 bytes).
+100% |*******************************************************************************************************************************************|   429        4.87 MiB/s    00:00 ETA
+226 Transfer complete.
+429 bytes received in 00:00 (687.92 KiB/s)
+ftp> bye
+221 Goodbye.
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo ls -l /home/ftpuser/
+total 4
+-rw------- 1 ftpuser ftpuser 429 Feb 26 00:44 rough.txt
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ pwd
+/home/sweatha
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ls -l
+-rw-rw-r--  1 sweatha sweatha       429 Feb 26  2025  rough.txt
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo ufw allow 22/tcp
+Rules updated
+Rules updated (v6)
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo adduser sftpuser
+info: Adding user `sftpuser' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `sftpuser' (1003) ...
+info: Adding new user `sftpuser' (1003) with group `sftpuser (1003)' ...
+info: Creating home directory `/home/sftpuser' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it is too simplistic/systematic
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for sftpuser
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+info: Adding new user `sftpuser' to supplemental / extra groups `users' ...
+info: Adding user `sftpuser' to group `users' ...
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sftp sftpuser@192.168.1.39
+sftpuser@192.168.1.39's password: 
+Connected to 192.168.1.39.
+sftp> put rough.txt 
+Uploading rough.txt to /home/sftpuser/rough.txt
+rough.txt                                                                                                                                             100%    0     0.0KB/s   00:00    
+sftp> exit
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/dir1/dir2$ sftp sftpuser@192.168.1.39
+sftpuser@192.168.1.39's password: 
+Connected to 192.168.1.39.
+sftp> get op.txt
+File "/home/sftpuser/op.txt" not found.
+sftp> get op.txt 
+Fetching /home/sftpuser/op.txt to op.txt
+op.txt                                                                                                                                                100%  361   348.0KB/s   00:00    
+sftp> exit
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/dir1/dir2$ ls -l
+total 4
+-rw-rw-r-- 1 sweatha sweatha   0 Jan 22 11:48 file3
+-rw-rw-r-- 1 sweatha sweatha 361 Feb 26 01:10 op.txt
+
+
+
+

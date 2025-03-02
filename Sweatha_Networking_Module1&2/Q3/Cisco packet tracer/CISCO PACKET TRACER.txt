@@ -1,0 +1,17 @@
+CISCO PACKET TRACER :
+
+->It is a networking simulation tool to analyze the packets , configure the devices , routing set up , switch set up , we can design a network and can check whether it will work in real time . 
+->It is provided by the cisco networking academy and we can install it from "netacad.com" .They also have a course to get start with cisco packet tracer for free
+->Without physically grabbing the components we can do the network system with all the end devices, router, switch etc and can simulate it in the virtual environment to check the connections, best suited for learning
+
+
+SIMPLE SIMULATION USING CISCO PACKET TRACER :
+->I have done one simple simulation that i have attached in screenshots :
+1)I have connected two pc's with one router and ping them one with another
+2)I have configured the ip's of 2 laptops using the desktop option of the device
+3)You can either select DHCP or statically assign ip , gateway, subnet mask to the pc's
+4)And for the router, using the CLI feature we can configure the router's ip address and name .If you are not familiar with the code do it in the config tab itself
+5)after these steps , choose the connecting cable to connect the pc's and router
+6)After proper connection , you can use the terminal in the desktop option of pc's to ping the other system's ip.It will give the ping cmd op 
+
+

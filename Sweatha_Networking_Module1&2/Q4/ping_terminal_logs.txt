@@ -1,0 +1,69 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping google.com
+PING google.com (142.250.196.14) 56(84) bytes of data.
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=1 ttl=59 time=4.15 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=2 ttl=59 time=177 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=3 ttl=59 time=179 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=4 ttl=59 time=172 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=5 ttl=59 time=4.56 ms
+^C
+--- google.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4002ms
+rtt min/avg/max/mdev = 4.153/107.406/179.452/84.172 ms
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 4 google.com
+PING google.com (142.250.196.14) 56(84) bytes of data.
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=1 ttl=59 time=60.2 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=2 ttl=59 time=3.96 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=3 ttl=59 time=3.55 ms
+64 bytes from maa03s44-in-f14.1e100.net (142.250.196.14): icmp_seq=4 ttl=59 time=3.54 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 3.535/17.800/60.161/24.457 ms
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 4 142.250.196.14
+PING 142.250.196.14 (142.250.196.14) 56(84) bytes of data.
+64 bytes from 142.250.196.14: icmp_seq=1 ttl=59 time=54.0 ms
+64 bytes from 142.250.196.14: icmp_seq=2 ttl=59 time=41.8 ms
+64 bytes from 142.250.196.14: icmp_seq=3 ttl=59 time=34.6 ms
+64 bytes from 142.250.196.14: icmp_seq=4 ttl=59 time=44.5 ms
+
+--- 142.250.196.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 34.639/43.703/53.959/6.922 ms
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 4 -i 2 142.250.196.14
+PING 142.250.196.14 (142.250.196.14) 56(84) bytes of data.
+64 bytes from 142.250.196.14: icmp_seq=1 ttl=59 time=110 ms
+64 bytes from 142.250.196.14: icmp_seq=2 ttl=59 time=139 ms
+64 bytes from 142.250.196.14: icmp_seq=3 ttl=59 time=118 ms
+64 bytes from 142.250.196.14: icmp_seq=4 ttl=59 time=116 ms
+
+--- 142.250.196.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 6009ms
+rtt min/avg/max/mdev = 109.657/120.614/138.738/10.914 ms
+
+--------------------------------------------------------------------------------------------------
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 4 -s 100 142.250.196.14
+PING 142.250.196.14 (142.250.196.14) 100(128) bytes of data.
+108 bytes from 142.250.196.14: icmp_seq=1 ttl=59 time=134 ms
+108 bytes from 142.250.196.14: icmp_seq=2 ttl=59 time=136 ms
+108 bytes from 142.250.196.14: icmp_seq=3 ttl=59 time=136 ms
+108 bytes from 142.250.196.14: icmp_seq=4 ttl=59 time=109 ms
+
+--- 142.250.196.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 109.181/128.833/136.248/11.376 ms
+
+

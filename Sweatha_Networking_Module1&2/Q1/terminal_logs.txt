@@ -1,0 +1,27 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo systemctl start ssh
+[sudo] password for sweatha: 
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable ssh
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ hostname -I
+192.168.1.39 
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ scp -r /home/sweatha/Desktop/Source_dir/ sweatha@192.168.1.39:/home/sweatha/Desktop/dest_dir/
+hello.txt                                                                                                                                             100%   17    26.8KB/s   00:00    
+hello2.txt                                                                                                                                            100%   15     0.5KB/s   00:00    
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ cp /home/sweatha/Downloads/Exp\ 5.txt /home/sweatha/Desktop/
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ cd Desktop/
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~/Desktop$ ls
+ Assignment_Drafts           EmbedUR_Networking_Assignments   Source_dir
+ dest_dir                   'Exp 5.txt'
+ EmbedUR_Linux_Assignments  'Old Firefox Data'
+
+
+
+

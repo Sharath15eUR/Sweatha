@@ -1,0 +1,32 @@
+DHCP : Dynamic Host Configuration Protocol
+
+->It is used to assign IP address from a ip address pool which has range of ip address that can be allocated by the server automatically to the devices in a network.
+->This networking service provides an alternative way for manually assigning IP address
+
+Whenever a device wants to connect to a n/w , it undergoes DORA process to get IP address using DHCP :
+
+DORA PROCESS :
+
+1)DISCOVER - The device request a dhcp server through DHCPDISCOVER message to broadcast ip
+
+2)OFFER - dhcp server responds with a ip address along with subnet mask ,duration of ip that device can hold , gateway ip through DHCPOFFER message.
+
+3)REQUEST - client that is the device will request the ip to use that by accepting the ip provided from the dhcp server, so that it notifies all the other dhcp servers taht this particular ip is assigned to that device .Other dhcp servers will not use that to another device untill this device duration ends through DHCPREQUEST message.
+
+4)ACKNOWLEDGMENT - dhcp server will confirm the assignment so that the client can use the assigned ip through DHCPACK message.
+
+This DORA process will assign a ip from dhcp server to the client device automatically whenever it wants to connect to a network by eliminating the manual process of assigning a ip .
+
+
+HOW TO CHECK OUR IP ADDRESS ASSIGNED BY DHCP :
+
+-> ip a | grep inet
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ip a | grep inet
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host noprefixroute 
+    inet 192.168.1.39/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp1s0
+    inet6 fe80::cd08:cef:d554:7d8b/64 scope link noprefixroute 
+
+
+

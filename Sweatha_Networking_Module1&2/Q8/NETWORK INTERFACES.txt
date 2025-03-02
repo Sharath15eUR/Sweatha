@@ -1,0 +1,61 @@
+NETWORK INTERFACES :
+->ifconfig - used to check both wired and wireless connnections and their parameters
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1588  bytes 186946 (186.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1588  bytes 186946 (186.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.39  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::cd08:cef:d554:7d8b  prefixlen 64  scopeid 0x20<link>
+        ether 2c:3b:70:ba:62:4d  txqueuelen 1000  (Ethernet)
+        RX packets 16981  bytes 14254167 (14.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8980  bytes 2598264 (2.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+PARAMETERS IN ifconfig :
+-flags--status of n/w interface whether it is active and running state and it is able to multicast , their hexadecimal values are added up as flags
+-mtu--max transmission unit is the max no.of bytes that can be sent and received through that interface
+-inet -- ipv4 addr
+-netmask--subnet mask for the ip addr
+-broadcast-- broadcast ip addr
+-inet6--ipv6 addr
+-ether--MAC address of the system
+-txqueuelen--Transmission queue length
+-RX packets and errors--the status and report of received packets
+-TX packets and errors--the status and report of transmitted packets
+
+
+->iwconfig - used to check wireless connections and their parameters mainly
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ iwconfig
+lo        no wireless extensions.
+
+wlp1s0    IEEE 802.11  ESSID:"FTTH"  
+          Mode:Managed  Frequency:2.432 GHz  Access Point: 54:47:E8:7F:F7:53   
+          Bit Rate=108 Mb/s   Tx-Power=3 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=70/70  Signal level=-40 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+
+PARAMETERS IN iwconfig :
+-ESSID--name of the wifi that i have connected
+-Mode--there are various modes like managed (our laptop is connected to a router),monitor(used while capturing packets) etc
+-frequency--freq of the wifi signal
+-Access point--gives the MAC addr of the n/w interface
+-Bit rate-- speed of the signals 
+-Tx-power --transmission power of the wifi 
+-Link quality -- signal quality whether high or low
+-Signal level -- the strength of signal 
+
+

@@ -1,0 +1,49 @@
+Home router :
+You can see all the connected devices of you home router using the WEB UI login of your home router by doing the following steps :
+
+1)Find your router ip
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ip route | grep default
+default via 192.168.1.1 dev wlp1s0 proto dhcp src 192.168.1.39 metric 600 
+
+so the ip addr after you default is the router's ip
+here , 192.168.1.1
+
+2)Visit "http://your_ip" in web browser
+
+3)You will be asking for un and pwd to login to you web ui admin console of your home router
+
+4)You can find the un and pwd at the back side of your router 
+
+5)After logging in , you can see the router status , devices connected , etc 
+
+6)Under devices connected , you can find all the devices connected to your home router along with their name , ip ddr, MAC addr,Connection type
+
+7)You can look through and log out from the admin console
+
+
+OTHER WAYS :
+IN my case, my home router's log in credentials are not accepted in the admin console . So i have contacted the provider.For now i used another method which is 'arp' in cmd prompt :
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo arp-scan 192.168.1.1
+Interface: wlp1s0, type: EN10MB, MAC: 2c:3b:70:ba:62:4d, IPv4: 192.168.1.39
+Starting arp-scan 1.10.0 with 1 hosts (https://github.com/royhills/arp-scan)
+192.168.1.1	54:47:e8:7f:f7:4e	Syrotech Networks. Ltd.
+
+1 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.10.0: 1 hosts scanned in 0.240 seconds (4.17 hosts/sec). 1 responded
+
+---------------------------------------------------------------------------------
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo arp-scan --localnet
+Interface: wlp1s0, type: EN10MB, MAC: 2c:3b:70:ba:62:4d, IPv4: 192.168.1.39
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.1.1	54:47:e8:7f:f7:4e	Syrotech Networks. Ltd.
+192.168.1.42	b4:05:a1:54:90:d1	(Unknown)
+
+2 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.10.0: 256 hosts scanned in 1.940 seconds (131.96 hosts/sec). 2 responded
+
+---------------------------------------------------------------------------------
+
+arp-scan  is a n/w scanning tool used to find the devices connected to a LAN by sending ARP requests.
+
