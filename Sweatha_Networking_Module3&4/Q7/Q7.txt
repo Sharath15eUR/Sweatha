@@ -1,0 +1,9 @@
+TRACEROUTE :
+ I have used 2 pc , 2 switches and one router to check the ping cmd and to troubleshoot the issue with traceroute of where the packets drop at each step 
+ 
+ -After the ip configuration , i have tried ping in pc1 but i got a error sating the packet is lost in the stat of ping cmd.
+ -So I have use traceroute 'tracert' cmd to check the packets drop at each step
+ -In my case it shows the ip of router then the pc2 ip which means that my ping request is going to the router first to search for the respective dst pc and then the dst 
+ -We can troubleshoot the ping failure with this cmd like if the pck dropped at the router and there is no further hops means the packet is not tranfered from the router so there might be issue in the ip or the router may not know the dst ip or cannot find the respective mac address in the table etc..
+ -Using these we can troubleshoot the issue and ping them again to get the reply from the other system 
+

@@ -1,0 +1,15 @@
+STATIC IP :
+-I have used cisco packet tracer for the simulation .Two pc's and one router.
+-Click the pc and go to the desktop menu and inside that click the ip configuration to assign a static ip ,gateway,subnet mask to the end devices.
+-Click the router , go to the CLI and make the interface of two pc's up and write the memory .
+
+
+MODIFY MAC ADDRESS :
+-Click the pc and go to the config tab and choose the interface
+-Modify the mac address of the pcs in the field 
+-We can view the mac address using IPCONFIG /all cmd 
+
+NETWORK CONNECTIVITY :
+-Ping the pc's ip address in the command prompt and and check the reply packets 
+-We can also see the interfaces and pc's connected to the router in its CLI using 'show interface brief','show arp' , to see the mapped details of  ips and mac address 
+

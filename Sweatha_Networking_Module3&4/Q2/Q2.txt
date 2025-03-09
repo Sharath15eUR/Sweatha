@@ -1,0 +1,18 @@
+NETWORK TOPOLOGY - GNS3 & ETHERNET FRAME ANALYSIS :
+
+-I have used one switch , two pc's from the device list.
+-Connect the devices using cables and configure the ip's , default gateway , subnet mask in the ip configuration.
+-Ping the devices from the cmd prompt and we can also view the mac address table in the CLI of switch.
+-Capture the packets while pinging using wireshark and click stop capturing 
+-Analyze the ethernet frame captured :
+*The frame number and how many bytes have been captured , frame length etc
+*Ethernet type and src , dest mac address will be displayed
+*Type of the ip configuration : ipv4 - 0x0800,ipv6-
+*Ip address of the src and dets pc and the protocol used like ICMP for ping etc..
+*The protocol detailed information will be displayed (Type number will tell the request info like for ping - 8)
+*Data field will give details about the bytes captured 
+-We can use display filters :
+eth.dst=='mac address of dst'--to get the packets only from specific destination
+eth.type==0x0800 -- to get only the ipv4 request
+ip.addr=='ip of any specific pc'
+

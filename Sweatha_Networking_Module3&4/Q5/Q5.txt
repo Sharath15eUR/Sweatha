@@ -1,0 +1,6 @@
+LAN TOPOLOGY :
+-I have used 2 laptops and one switch in the cisco packet tracer
+-Connect the devices using copper straight cable 
+-Configure the laptops with ip's and default gateway 
+-after configuration ping the laptop with ip's 
+-In CLI of switch we can also see the interface , ip route details etc.

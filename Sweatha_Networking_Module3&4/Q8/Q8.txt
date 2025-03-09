@@ -1,0 +1,36 @@
+LINUX KERNEL HANDLING ETHERNET DEVICES AND NETWORK INTERFACES :
+
+Kernels will handle the ethernet devices and the n/w interfaces through the n/w stack architecture which is a layered model .
+The kernel manages the communication through drivers , protocols, sys calls through the layered model.
+
+1)physical layer - This layer helps in transmission of raw data over physical cables and NIC card (N/W inteface card)
+2)Data Link layer - This layer used to manage the data sent from physical layer using drivers and MAC address to find the specified mac in the packtet details
+3)N/W layer (IPv4/v6 routing)- It is used to route the data identified from the mac table with the correct ip address .ARP table also plays a role here .
+4)Transport layer - tcp/udp protocols used in transporting the packets .It also involves flow control,congestion control , error control .It break down the requests to packets .
+5)Application layer - User programs use the system calls to transfer the request packets like send(),receive(),socket() etc ..
+
+NETWORK STACK ARCH - KERNEL HANDLING THE FLOW OF PACKETS :
+
+-When the  requests are sent by the client using system calls, the application layer transmit the packets to the transport layer which process the requests and break down them to packets.
+
+-The packets are then sent to the n/w layer which has the drivers and devices processing the requests . dev_queue_xmit() method used to transmit the req to the NIC card using tx queue which then transmits the frame to electric signals to the cable 
+
+-When the frame is received over NIC card , an interrupt is called and kernel veifies the mac address and send the response pckt to the respective ip address and transmit it using netif_rx() through the network stack arch.
+
+
+DESTINATION FIND BY KERNEL:
+
+Whenever packet arrives , kernel checks for the ip route and it determines whether to deliver pckt locally , frwd it to other n/w or not a valid pckt.
+
+cmd : 'ip route show'
+
+- We can also use bridge to enable different n/w communication , ethtool to monitor the network.
+
+
+Overall , Linux kernel handles the ethernet devices n/w interfaces are through sending and receiving the packet requests , and the process inside is given by the network stack architecture.
+
+
+
+
+
+

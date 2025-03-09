@@ -1,0 +1,39 @@
+We can use cisco packet tracer or gns3 for the network simulation . Both are n/w simulation tools. But we can't analyze the packets sent by the systems in packet tracer directly to the wire shark since it doesn't have any direct integration with the wireshark.Eventhough we can use them separately like analyzing packets in wirehsark and know about simulation using cisco packet tracer.
+
+But we can use GNS3 which is more efficient and can directly integrate with wireshark for real time analysis of the packets sent by the systems in the simulation .
+
+So i have used GNS3 here . In  GNS3, to view the mac address table we can't use the general switch that is available since it has very limited features .To use a full featured linux like switch we can use cisco provided switch iso image file and can import the image in gns3 to create a new switch using the preference menu , then creating new device in the ios UNIX , but we need a license to use that .
+
+So i have used an open source ARISTA switch which uses arista extended operating system (EOS) to provide the full featured switch in the gns3 . 
+
+We can download the ARISTA eos file by creating an account in their portal and we have to use any organization mail id . After logging in  go to the software downloads and download the ARISTAvEOS file which is .qcow2 .
+
+After downloading , in gns3 create a new project to do the simulation and go to the prefernce menu and in the QEMU vm click new and give the name of switch and allocate rams and add the downloaded image and save the things.Now we can add ARISTA switch from the devices list in the topology and use it as layer2 or layer 3 switch .
+
+LAYER 2 SWITCH :
+It just forwards the packets based on the MAC address it has learned from the transmission.
+
+LAYER 3 SWITCH :
+IP routing can be done using layer 3 switch . When we want to send packets between different vlans using the ip route table .
+
+THE NETWORK TOPOLOGY :
+-->I have used 3 pc's and one ARISTO switch from the device lsit in the topology.
+-->connect the devices using cables (copper straight cut cable)
+-->configure the ip's of pc's using desktop and ip configuration option . 
+-->Provide the ip , subnet mask and default gateway for both pc's
+-->Make sure the pc's ip are in the same subnet 
+
+NETWORK CONNECTIVITY :
+-->Ping the pc's from one other the ping request will be forwarded to the end system by ARISTA switch i
+-->It forwards the packet based on the mac address table, identifies the correct dest mac and sends the ping request 
+-->In CLI of switch , use commands like 'show interface brief'-it shows the interfaces of the switch and pc's connected with that,'show vlan brief'- shows the vlan connection of switch here i have used the default vlan .so both the pcs will be in same vlan.
+-->If any issue arise in ping , check the ip configuration and they are in same subnet .
+
+WIRESHARK ANALYZING :
+-->We can analyze the packet flow between the pc's in real time using wireshark.
+-->Right click the cable connection bt the pc and switch in the topology and click start capture.
+-->It will be redirected to the wireshark and the packets will be captured in real time of the pc's in the topology of GNS3.
+-->Analyze the packets and the ethernet frames , filter the packets using display filter like viewing icmp packets , arp packets , etc..
+
+
+

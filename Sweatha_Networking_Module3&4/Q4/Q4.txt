@@ -1,0 +1,9 @@
+TROUBLESHOOTING ETHERNET COMMUNICATION :
+
+-I have used 2 pc's , 2 switch and one router in the packet tracer
+-After configuring ip's of pc's and turning the interfaces up in router CLI , try to ping the systems
+-If there is any issue in ping use 'tracert' to traceroute the packets like teh path it takes to reach the destination in each hop
+-We can also use arp-a to check the arp table to verify the ip's
+-In CLI of switch see the interface brief  ip route to check the ips are configured correctly
+-I have also attached the screenshot of simulation of the tracert cmd of packets 
+

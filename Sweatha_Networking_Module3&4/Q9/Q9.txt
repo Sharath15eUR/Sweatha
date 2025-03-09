@@ -1,0 +1,25 @@
+CONFIGURING BASIC LAN INTERFACE :
+
+We can configure basic lan set up by using the following steps:
+
+1)We can see all the interfaces in the lan set up first and then we can configure any other interface like set up and down and changing ip's.
+-->ip link show
+
+2)We can choose the interface we want to configure - eth0,wlp1s0 etc..
+-->sudo ip link set wlp1s0 up
+-->sudo ip link set wlp1s0 down
+
+3)We can also assign or modify the ip address to the interface
+-->sudo ip addr add 192.168.1.100/24 255.255.255.0 dev wlp1s0
+this will assign 192.168.1.100 to the interface wlp1s0 .
+
+4)We can view or verify the configration using cmds 
+-->ip addr show wlp1s0 (check the ip of wlp1s0)
+-->ip route show (check the routing information)
+
+5)We can also modify the default gateway 
+-->sudo ip route add default via 192.168.1.1 (add the default gateway ip as 192.168.1.1)
+
+
+We can use these commands to configure the basic lan interface like with 2 pc's and one router by configuring their ip address and by enabling and disabling the interface and modifying router's default gateway ip etc.
+

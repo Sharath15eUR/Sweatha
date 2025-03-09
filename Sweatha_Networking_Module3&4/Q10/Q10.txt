@@ -1,0 +1,40 @@
+MAC ADDRESS TABLE :
+
+-->MAC table is used to find the device in the network by their physical address by switch.
+
+-->It is called as forwarding db since it helps the switch to forward the packets based on the data from the table which is more like a DB .
+
+-->Whenever packets come to the switch , it will search the source mac address in the table if it's present it will fetch the port and if not it will add the entry in table along with the port the packet was received.
+
+-->Then search for the dest mac address in the table and if it's present the switch forwards the pckt to the corresponding port.
+
+-->If it is unknown the switch forwards the pckts frame  to all the ports except the source to find the correct one .
+
+MAC table of a switch :
+
+Like i mentioned , a n/w switch learns the ports by observing the packets that flow through them . It dynamically updates the table with the observed information like mac addr, port which will be useful for efficient communication of packets.
+
+INSPECTING MAC TABLE :
+-->ip link show (This shows all the n/w interface information and their status)
+
+we can also use bridge , so bridge is like used to connect between 2 or more LAN's .Switch is to make efficient communication in a n/w.
+
+EG : we have 2 interface eth 1 , 2 and if we connect them through bridge -- they can communicate bt them as if they were in the same n/w.
+
+-->bridge fdb show (to view all the interfaces details i.e the data from forwarding database having MAC address and their ports)
+
+-->bridge fdb add 00:00:ab:bc:cd:de:ef dev wlp1s0 master br1
+(We can also add MAC address statically to the bridge)
+-here 'master br1' is the bridge interface name
+
+
+BASIC SWITCH OPERATION :
+1)We are going to create a basic operation using switch,bridge and interfaces
+2)Creating a bridge and interfaces
+-->ip link add name br1 type bridge
+-->ip link swt eth0 master br1
+-->ip link set wlp1s0 master br1
+-->ip link set br1 up
+
+2)We can check the device list to know about the devices connected
+-->

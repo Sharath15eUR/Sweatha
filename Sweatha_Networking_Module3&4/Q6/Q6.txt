@@ -1,0 +1,10 @@
+TROUBLE SHOOT PING WITH TRACERT :
+
+-I have used 3 pc's and one hub from the devices
+-Configure the pc's with ip address and default gateway 
+-Ping pc2 from pc1 , if anything goes wrong like if you get any error like req time out , packet loss in the statistics of ping cmd do the following :
+*Check the ip of pc2 in cmd of pc2 using 'ipconfig' cmd
+*Use tracert cmd in pc1 cmd prompt to check the paths of packets in the system 
+*In my case, i have tried ping but i got a req time out error and i have used tracert cmd and from the output i can get the devices that my packets flow in the network 
+*If any ip configuration is incorrect , or any traffic issue arises we can't ping the system 
+*Using this we can troubleshoot and ping the system again 
