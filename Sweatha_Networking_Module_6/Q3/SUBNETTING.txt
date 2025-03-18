@@ -1,0 +1,143 @@
+10.0.0.0/24  
+- Subnet Mask: 255.255.255.0  
+- Total IP Addresses: 
+  - /24 means there are 32 – 24 = 8 bits left for hosts  
+  - Total addresses = 2⁸ = 256  
+  - Valid host addresses = 256 – 2 (network & broadcast) = 254
+
+Divide into 4 Subnets
+
+- 4 = 2², we need to borrow 2 bits from the host.
+
+
+- Borrow 2 bits →/24 + 2 = /26
+
+
+
+- /26 means 26 bits are used for the network portion.
+- The new subnet mask 
+  - Binary: 11111111.11111111.11111111.11000000 
+- New Subnet Mask:255.255.255.192
+
+
+- Number of host bits = 32 – 26 = 6 bits  
+- Total addresses per subnet = 2⁶ = 64  
+- Valid host addresses = 64 – 2 = 62
+
+
+
+ Subnet Ranges
+
+A /26 network means the subnets will increase in increments of 64 addresses.  
+
+
+Subnet 1:
+- n/w- 10.0.0.0  
+- broadcast addr -10.0.0.63
+-  Host Range- 10.0.0.1 – 10.0.0.62
+
+Subnet 2:
+- network Address- 10.0.0.64 
+- Broadcast Address-10.0.0.127  
+- Host Range- 10.0.0.65 – 10.0.0.126
+
+Subnet 3:
+- Network Address- 10.0.0.128  
+- Broadcast Address- 10.0.0.191 
+-  Host Range- 10.0.0.129 – 10.0.0.190
+
+Subnet 4
+- Network Address- 10.0.0.192
+- broadcast Addr- 10.0.0.255 
+- Host Range-10.0.0.193 – 10.0.0.254
+
+
+
+
+VERIFY PING :
+
+
+1. in switch CLI:
+
+enable
+configure terminal
+
+2. Create VLANs:
+
+vlan 10
+name Subnet1
+vlan 20
+name Subnet2
+vlan 30
+name Subnet3
+vlan 40
+name Subnet4
+
+
+3. Assign VLANs to switch ports:
+
+interface <intername>
+ switchport mode access
+ switchport access vlan 10
+exit
+
+do this for other vlans 
+
+Router Configuration:
+
+1. Create sub-interfaces on Router:
+
+interface gigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.0.0.1 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.0.0.65 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 10.0.0.129 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet0/0.40
+ encapsulation dot1Q 40
+ ip address 10.0.0.193 255.255.255.192
+ no shutdown
+
+SET UP THE TRUNK PORT :
+
+interface fastEthernet0/24
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40
+ no shutdown
+exit
+
+
+2. Enable routing:
+
+ip routing
+
+
+Step 3: Configure PCs
+Configure IP on each PC:
+- PC0 →  10.0.0.2 → Gateway: 10.0.0.1  
+- PC1 →  10.0.0.66 → Gateway: 10.0.0.65  
+- PC2 →  10.0.0.130 → Gateway: 10.0.0.129  
+- PC3 →  10.0.0.194 → Gateway: 10.0.0.193  
+
+Step 4: Test Connectivity
+1. Ping from PC0 to PC1:
+
+ping 10.0.0.66
+
+2. Ping from PC2 to PC3:
+
+ping 10.0.0.194
+
+
+The ping should be successfull and we have done cpnnecting the pcs with differnet subnets using different vlans and single router (router on a stick,subinterfacing a single router to handle multiple vlans from differnet n/w)
+
+ 
