@@ -1,0 +1,16 @@
+VOIP IP PHONE 
+in IP phone we can send both data and voice
+-using separate vlans for data and voice
+-high priority should be given to voice and it can be done using
+mls qos trust cos- class of service score ranges from 0 to 7 which tells the priority score of voice data
+-we can create separate vlans for them in switch and can analyze the vlan configurations
+-show vlan brief
+-show interface <name> switchport-it tells which vlan is configured for what and teh status also
+-show mls qos interface <name>-tells whether the qos is enabled or not
+
+since in cisco pckt tracer we cannot simulate the real ip phone to send data and voice ,, i have connected and configure and checked the status of vlans 
+
+
+ERROR I HAVE FACED:
+-enabling qos failed for me , so i enabled it globally
+-mls qos

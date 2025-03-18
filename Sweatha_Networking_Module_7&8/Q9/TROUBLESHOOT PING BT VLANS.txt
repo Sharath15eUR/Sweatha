@@ -1,0 +1,18 @@
+TROUBLESHOOT PING BT VLANS :
+
+-show vlan brief in switch
+used to see the vlan connections check if it is in active status
+
+-show ip interface brief in router
+used to see the interfaces connected in router , check the main interface and sub interfaces whether it is up in both protocol and status 
+
+-show interfaces status in switch 
+used to see the status of interfaces in switch conncetd to vlans whether it is correctly mapped to the vlans and active
+
+-show interfcaes trunk
+used to see whether the trunk port connection bt the router and switch are crt and active and check the vlans are allowed on that port trunk
+
+-tracert <dst ip>
+used to see where the pckt drops in the n/w
+
+using tehse we can solve the issue bt df vlans communication 

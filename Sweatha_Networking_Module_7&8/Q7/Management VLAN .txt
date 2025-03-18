@@ -1,0 +1,11 @@
+Management VLAN:
+-this type of vlan is usually for the administartive purpose , so that the other n/w are not disturbed
+-it is used to configure the n/w devices switch,routers etc to control them from remote side 
+-it restricts the access to specific users like admin
+
+
+HOW I HAVE DONE IT :
+-i have assigned a vlan for management and a ip address to it
+-and a telnet line for remote log in and a password
+-when i connect to the n/w device through pc i  have to give password and then i can access the switch from the remote pc 
+

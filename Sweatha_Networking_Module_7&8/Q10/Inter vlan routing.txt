@@ -1,0 +1,20 @@
+Inter vlan routing :
+
+-Vlan is something that is used to logically group devices in the n/w such that it is accessible to the specific group .THey all will be on the same physical n/w but will be divided logically
+
+-it is used to limit the broadcast domain which enhances the privacy of data
+
+-We can use switch to create vlans this is at layer 2 (data link layer)and if we want to route bt these vlans we have to go for layer 3 (n/w),sowe should use either layer 3 switch or router on a stick(using router)
+
+-Here i am using router on a stick
+
+MODES:
+1)access mode-to communicate within n/w
+2)to communicate bt multiple vlans
+
+-In router , we can create sub interfaces to enable inter vlan communication -0.10,0.20
+-We are using IEE 802.1Q stnadard for vlan tagging 
+-vlan tag is a 4 byte number to indicate the vlan id in the req
+-SO using these we can communicate bt df n/w pc's through switch to frwd the packet along with vlan tag to the router which enables routing bt the df n/w 
+
+

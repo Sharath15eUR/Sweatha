@@ -1,0 +1,16 @@
+NATIVE VLAN CONF:
+
+-Native vlans are used for the req packets which are untagged
+-if any packet is received at the interface untagged , it will be redirected to the native vlan configured
+-by default vlan 1 is the dafault , but it is advisable to use a specific vlan configured in the industries for that
+
+
+
+
+-I have used 2 switches with 2 pc's and in each pc i have configured the vlans
+-in sw1 i have configure vlan 10 as native and in sw2 vlan20 as native
+-so when i enable the trunk port interface after the configureation i am getting a warning as native vlan misconfigured 
+-so it says only one vlan is allowed to configure for native
+-i have changed the vlan 20 to vlan 10 as native in sw1 , the warning have gone 
+
+-we can see the details in 'show vlan brief 'cmd 

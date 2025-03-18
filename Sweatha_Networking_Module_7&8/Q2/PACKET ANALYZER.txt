@@ -1,0 +1,31 @@
+PACKET ANALYZER
+
+DNS PACKETS
+
+-transaction id 
+-flags -query(Q),res R,opcode 
+-questions--query
+-ans--reply ans
+
+
+TCP 
+
+--connection oriented protocol , so it uses 3 way handshake to ensure stable connectivity : SYN,SYN->ACK,ACK
+-src port
+-dst port
+-window size---buffer size
+-checksum--to check error
+-urg ptr
+-flags--SYN:to start conn sync,ACK:to acknowledge after receive,FIN :to finish the conn etc 
+-seq num--byte position
+-ack num--confirmed received packtes
+
+
+
+UDP 
+--it is not connection oriented so no handshake mechanism and so it is very fast 
+--but no guarantee of data reliability
+
+-src , dst port
+-length
+-checksum

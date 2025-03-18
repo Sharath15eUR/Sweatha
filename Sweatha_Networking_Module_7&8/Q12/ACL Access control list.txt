@@ -1,0 +1,34 @@
+ACL - Access control list
+-it is used tp control the n/w traffic and can apply rules to filtr the traffic on a specified n/w
+
+
+TYPES:
+1)standard acl:
+-can be used to control only based on source portts and not helps us to filter with types of interface , adv filtering in the interface deviceetc 
+-1-99 numbers can be used for the access-list
+
+eg:
+access-list 10 deny 192.168.1.10 - blocks any req from the given src
+
+2)Extended acl:
+-can be used for advanced control and can create rules for specific interface type 
+-100-199 numbers are used for access-list
+
+CHECKING THE ACL RULES: 
+how we can check whether the restriction is happening because of the acl that we have created ?
+-we can use 'show access-lists <number>'--it will show the number of matches this rule have found in the prev execution of testing
+
+eg:
+access-list 102 deny tcp any any eq 80 - blocks the http req since port 80 is for http from any src and any dst ip on tcp protocol
+- set the access list in the interface stating inbound or outbound direction
+IN: the req which is received in to the router
+OUT:the req which is going out from the interface
+eg:go to the respective interface and give ip access-group 102 in , ip access-group 102 out
+
+
+Control based on specific ip:
+-We can restrict the src with their specific  ip 
+
+eg:access-list 10 deny  192.168.1.10 - it block all the req from the src ip given , this is standard acl
+
+

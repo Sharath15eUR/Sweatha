@@ -1,0 +1,39 @@
+ACL - Access control list
+-it is used tp control the n/w traffic and can apply rules to filtr the traffic on a specified n/w
+
+
+TYPES:
+1)standard acl:
+-can be used to control only based on source portts and not helps us to filter with types of interface , adv filtering in the interface deviceetc 
+-1-99 numbers can be used for the access-list
+
+eg:
+access-list 10 deny 192.168.1.10 - blocks any req from the given src
+
+2)Extended acl:
+-can be used for advanced control and can create rules for specific interface type 
+-100-199 numbers are used for access-list
+
+
+
+eg:
+access-list 102 deny tcp any any eq 80 - blocks the http req since port 80 is for http from any src and any dst ip on tcp protocol
+- set the access list in the interface stating inbound or outbound direction
+IN: the req which is received in to the router
+OUT:the req which is going out from the interface
+eg:go to the respective interface and give ip access-group 102 in , ip access-group 102 out
+
+CHECKING THE ACL RULES: 
+how we can check whether the restriction is happening because of the acl that we have created ?
+-we can use 'show access-lists <number>'--it will show the number of matches this rule have found in the prev execution of testing
+
+
+Control based on df src & dst ports :
+-We can restrict or allow specific src and dst with their ip and ports 
+
+eg:access-list 100 deny tcp 192.168.1.10 eq 80 10.0.0.2 eq 443 - 80 is for http and 443 is for https 
+
+ERROR I HAVE FACED :
+-I have denied one ip from req using http but when i allow also it is not getting displayed
+-so i deleted the acl list since the deny rule which i give earlier still in practice (no access-list 102)
+-after that i can make a successful req to the dst 
