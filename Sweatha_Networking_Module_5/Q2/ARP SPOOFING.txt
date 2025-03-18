@@ -1,7 +1,13 @@
 ARP SPOOFING :
 
-When we want to find the mac addr we will send arp req encapsulated in an ethernet frame  that is broadcasted to all the devices through the switch or access point and the corresponding device having that ip will unicast ARP reply with the mac addr to the req device.
+--When we want to find the mac addr we will send arp req encapsulated in an ethernet frame  that is broadcasted to all the devices through the switch or access point and the corresponding device having that ip will unicast ARP reply with the mac addr to the req device.
 
-BUt any device can fake the reply pretending that i am the device having the ip you have sent in ARP req to steal the data or to disrupt the n/w traffic .This is ARP spoofing more like a man in middle attack . 
+--BUt any device can fake the reply pretending that i am the device having the ip you have sent in ARP req to steal the data or to disrupt the n/w traffic .This is ARP spoofing more like a man in middle attack . 
 
+--After the fake reply ,any data that is sent over the traffic of that mac address will be sent to the attackers pc 
 
+--in packet tracer we can't simulate this since it does not allow for fake response without initiating arp request
+
+--it is a layer 2 attack and requires cntrl over arp table manipulation 
+
+--we can insatll 2 vm ain gns3 and can simulate this in real time
