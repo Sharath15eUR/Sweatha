@@ -1,0 +1,144 @@
+TRACEROUTE:
+-it is used to trace the path of packets to reach the dst ip.
+-we can use this to find the hops the packet takes to rach the dst server
+-also it is used in debuggging if any req cmd fails , eg-ping cmd, we can find where the packet stops and discarded to troubleshoot
+
+VARIOUS OPTIONS IN TRACEROUTE :
+
+-OP FORMATS:
+ip addr of dst, max hops the packet can take ,size of each packet,the num indicate the hop numbers total hops to reach dst ,the seconds indicate the RTT of each packet,the ip after hop number is the current ip the packet resides.
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ traceroute google.com
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  1.473 ms  2.362 ms  2.388 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  maa03s44-in-f14.1e100.net (142.250.196.14)  9.947 ms * *
+
+
+-define the max hops
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ traceroute -m 10  google.com
+traceroute to google.com (142.250.196.14), 10 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  1.444 ms  2.201 ms  2.150 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * maa03s44-in-f14.1e100.net (142.250.196.14)  24.177 ms
+
+
+-Define the waiting time for packets
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ traceroute -w 10  google.com
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  22.957 ms  23.030 ms  23.281 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  maa03s44-in-f14.1e100.net (142.250.196.14)  3.703 ms * *
+
+
+-define the no.of packets
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ traceroute -q 3  google.com
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  22.643 ms  22.765 ms  22.941 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * maa03s44-in-f14.1e100.net (142.250.196.14)  3.554 ms *
+
+
+-to show only the ip add not the name
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ traceroute -n   google.com
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  192.168.1.1  22.573 ms  22.852 ms  23.074 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  142.250.196.14  7.334 ms *  4.306 ms
+
+
+-by default teh traceroute is udp but if we want to change into icmp :
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo traceroute -I google.com
+[sudo] password for sweatha: 
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  20.337 ms  20.491 ms  20.686 ms
+ 2  10.0.14.1 (10.0.14.1)  20.867 ms  21.009 ms *
+ 3  10.219.31.130 (10.219.31.130)  22.377 ms  22.530 ms *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  72.14.218.250 (72.14.218.250)  5.307 ms  6.978 ms  6.978 ms
+ 9  216.239.43.131 (216.239.43.131)  6.155 ms  6.261 ms  6.436 ms
+10  142.251.55.41 (142.251.55.41)  4.333 ms  5.695 ms  5.914 ms
+11  maa03s44-in-f14.1e100.net (142.250.196.14)  4.293 ms  4.507 ms  4.670 ms
+
+
+-if we want to change into tcp
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ sudo traceroute -T google.com
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  5.088 ms  5.082 ms *
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * maa03s44-in-f14.1e100.net (142.250.196.14)  13.682 ms  4.581 ms
+
+
+-define the interface for routing
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ traceroute -i wlp1s0 google.com
+traceroute to google.com (142.250.196.14), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  1.871 ms  1.926 ms  2.085 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * maa03s44-in-f14.1e100.net (142.250.196.14)  12.412 ms  4.255 ms
+
+

@@ -1,0 +1,85 @@
+TRUNK PORTS AND PING:
+-I have used 2 pcs and two switches and one router to create trunk ports bt switches and ping 
+-
+1. in switch CLI:
+
+enable
+configure terminal
+
+2. Create VLANs:
+
+vlan 10
+name Subnet1
+vlan 20
+name Subnet2
+vlan 30
+name Subnet3
+vlan 40
+name Subnet4
+
+
+3. Assign VLANs to switch ports:
+
+interface <intername>
+ switchport mode access
+ switchport access vlan 10
+exit
+
+do this for other vlans 
+
+Router Configuration:
+
+1. Create sub-interfaces on Router:
+
+interface gigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.0.0.1 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.0.0.65 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 10.0.0.129 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet0/0.40
+ encapsulation dot1Q 40
+ ip address 10.0.0.193 255.255.255.192
+ no shutdown
+
+SET UP THE TRUNK PORT :
+
+interface fastEthernet0/24
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40
+ no shutdown
+exit
+
+
+2. Enable routing:
+
+ip routing
+
+
+Step 3: Configure PCs
+Configure IP on each PC:
+- PC0 →  10.0.0.2 → Gateway: 10.0.0.1  
+- PC1 →  10.0.0.66 → Gateway: 10.0.0.65  
+- PC2 →  10.0.0.130 → Gateway: 10.0.0.129  
+- PC3 →  10.0.0.194 → Gateway: 10.0.0.193  
+
+Step 4: Test Connectivity
+1. Ping from PC0 to PC1:
+
+ping 10.0.0.66
+
+2. Ping from PC2 to PC3:
+
+ping 10.0.0.194
+
+
+The ping should be successfull and we have done cpnnecting the pcs with differnet subnets using different vlans and single router (router on a stick,subinterfacing a single router to handle multiple vlans from differnet n/w)

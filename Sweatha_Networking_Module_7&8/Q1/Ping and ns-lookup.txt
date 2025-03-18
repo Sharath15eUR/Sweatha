@@ -1,0 +1,122 @@
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 3 google.com
+PING google.com (142.250.193.142) 56(84) bytes of data.
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=1 ttl=59 time=5.37 ms
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=2 ttl=59 time=23.3 ms
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=3 ttl=59 time=15.2 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 5.367/14.625/23.311/7.336 ms
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 3 facebook.com
+PING facebook.com (57.144.158.1) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-04-tir3.facebook.com (57.144.158.1): icmp_seq=1 ttl=56 time=6.05 ms
+64 bytes from edge-star-mini-shv-04-tir3.facebook.com (57.144.158.1): icmp_seq=2 ttl=56 time=260 ms
+64 bytes from edge-star-mini-shv-04-tir3.facebook.com (57.144.158.1): icmp_seq=3 ttl=56 time=20.0 ms
+
+--- facebook.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 6.051/95.227/259.619/116.381 ms
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 3 amazon.com
+PING amazon.com (54.239.28.85) 56(84) bytes of data.
+64 bytes from 54.239.28.85: icmp_seq=1 ttl=244 time=225 ms
+64 bytes from 54.239.28.85: icmp_seq=2 ttl=244 time=306 ms
+64 bytes from 54.239.28.85: icmp_seq=3 ttl=244 time=328 ms
+
+--- amazon.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 224.877/286.282/328.111/44.360 ms
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 3 github.com
+PING github.com (20.207.73.82) 56(84) bytes of data.
+64 bytes from 20.207.73.82: icmp_seq=1 ttl=115 time=19.8 ms
+64 bytes from 20.207.73.82: icmp_seq=2 ttl=115 time=37.5 ms
+64 bytes from 20.207.73.82: icmp_seq=3 ttl=115 time=34.6 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 19.813/30.659/37.541/7.761 ms
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ ping -c 3 cisco.com
+PING cisco.com (72.163.4.185) 56(84) bytes of data.
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=1 ttl=41 time=257 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=2 ttl=41 time=306 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=3 ttl=41 time=331 ms
+
+--- cisco.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2125ms
+rtt min/avg/max/mdev = 257.121/297.960/330.905/30.635 ms
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ nslookup www.google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	www.google.com
+Address: 142.250.205.68
+Name:	www.google.com
+Address: 2404:6800:4007:802::2004
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ nslookup www.facebook.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+www.facebook.com	canonical name = star-mini.c10r.facebook.com.
+Name:	star-mini.c10r.facebook.com
+Address: 57.144.158.1
+Name:	star-mini.c10r.facebook.com
+Address: 2a03:2880:f34f:1:face:b00c:0:25de
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ nslookup www.amazon.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+www.amazon.com	canonical name = tp.47cf2c8c9-frontier.amazon.com.
+tp.47cf2c8c9-frontier.amazon.com	canonical name = www.amazon.com.edgekey.net.
+www.amazon.com.edgekey.net	canonical name = e15316.dsca.akamaiedge.net.
+Name:	e15316.dsca.akamaiedge.net
+Address: 23.223.154.90
+Name:	e15316.dsca.akamaiedge.net
+Address: 2600:1417:71:184::3bd4
+Name:	e15316.dsca.akamaiedge.net
+Address: 2600:1417:71:18b::3bd4
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ nslookup www.github.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+www.github.com	canonical name = github.com.
+Name:	github.com
+Address: 20.207.73.82
+
+
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ nslookup www.cisco.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+www.cisco.com	canonical name = www.cisco.com.akadns.net.
+www.cisco.com.akadns.net	canonical name = wwwds.cisco.com.edgekey.net.
+wwwds.cisco.com.edgekey.net	canonical name = wwwds.cisco.com.edgekey.net.globalredir.akadns.net.
+wwwds.cisco.com.edgekey.net.globalredir.akadns.net	canonical name = e2867.dsca.akamaiedge.net.
+Name:	e2867.dsca.akamaiedge.net
+Address: 23.209.254.61
+Name:	e2867.dsca.akamaiedge.net
+Address: 2600:1417:71:188::b33
+Name:	e2867.dsca.akamaiedge.net
+Address: 2600:1417:71:18a::b33
+
+
+
+

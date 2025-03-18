@@ -1,0 +1,35 @@
+Types of NAT :
+
+STATIC :
+-This is used when the server public ip is not gonna change , it remains static 
+-it is easy to configure but practically not effective 
+
+eg:
+ip nat inside source static 192.168.1.10 10.0.0.1
+
+
+
+DYNAMIC :
+-it maps the internal n/w ip's to a pool of public ip
+-this pool of ip addr is used by an internal n/w temporarily for each session .After the session it again drops it  to the pool .
+
+
+eg:
+
+ip nat pool PUBLIC_POOL 10.0.0.10 10.0.0.20 netmask 255.255.255.0
+
+
+access-list 1 permit 192.168.1.0 0.0.0.255 - permit the internal private ip to be translated using NAT
+
+
+ip nat inside source list 1 pool PUBLIC_POOL
+
+
+
+PAT (Port address translation):
+
+-this is used when many private ips are connected to a single public ip 
+-it is more efficient usage pf public ip and cost effective one 
+
+eg:
+ip nat inside source list 1 interface GigabitEthernet0/1 overload - this allows the private ips to use the gig0/1 interface as the public interface 
