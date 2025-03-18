@@ -1,0 +1,35 @@
+IP CLASSES AND NAT:
+
+-192.168.10.5
+
+    First octet = 192 → Falls in 192–223 → Class C
+   
+
+-172.20.15.1
+
+    First octet = 172 → Falls in 128–191 → Class B
+   
+
+-8.8.8.8
+
+    First octet = 8 → Falls in 0–127 → Class A
+    
+    
+  PRIVATE IP RANGES :
+  
+10.0.0.0 – 10.255.255.255	Class A	
+172.16.0.0 – 172.31.255.255	Class B	
+192.168.0.0 – 192.168.255.255	Class C
+
+THESE are fixed by internet assigned numbers authority .
+
+-192.168.10.5 - private class c
+-172.20.15.1 - private class b
+-8.8.8.8 - public 
+
+NAT HANDLING PRIVATE IP:
+
+-it is used to frwd the req from end device to the external n/w by replacing the private ip of device to the public router ip so that it can communicate over the internet.
+-If the public server replies it frwds it to the public ip of device and by using nat table we will know the private ip of device to send the response back
+-it allows multiple private ip's to have single public ip
+-public ips do not need nat to translate since it is able to communicate over the internet 

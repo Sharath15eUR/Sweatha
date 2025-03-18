@@ -1,0 +1,9 @@
+DIFFERENT SUBNETS CONNECTING USING STATIC ROUTE :
+
+-I have used 2 pcs , 2 routers.Connect pc with routers using cable and connect the gigabitethernet 0/0 and use the 0/1 in both the routers to connect them.
+-Configure the ip,subnet mask, defualt gateway in pc and give the ips as 2 df networks 
+-configure the ip of routers that is the default gateway ip and the 0/1 interface 1p should be in the same n/w to enable the communication bt two df n/w ie the pc0 and pc1 
+-enable the interfaces in the router cli
+-add a static route in router 0 to route the req to pc1 which is connected to router 1
+-similarly for router 1 add a static route to frwd the req from pc1 to reach pc0 through router 0
+-ping the pc1 from pc0 and we can use tracert cmd to check the path of packets the router ip etc..

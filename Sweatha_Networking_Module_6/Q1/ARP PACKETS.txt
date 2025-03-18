@@ -1,0 +1,33 @@
+ARP PACKETS :
+
+Address resolution protocol - this protocol helps to map the ip and MAC address .So when we ping any device inside the same LAN  it helps to find the mac address using the arp table .It works at layer 2 that is datalink layer.Everything is based on MAC addr in ethernet n/w so we have to map it to the respective IP to communicate with the device since in layer 3 everything works using IP address . ARP acts as a bridge bt these to enable the communication .
+
+TYPES OF PACKETS :
+ARP REQ:
+This is sent when the device wants to find the MAC addr , ip is already known.The ip is known by the DHCP mechanism so the system will send ARP req to find the mac addr of the router if we try to ping our home router . 
+
+REQ PACKETS :
+
+-SRC ip- ip addr of src device;mac-mac addr of src;
+-target ip ;mac-00.00.00.00.00.00 (mac addr is unknown)
+-opcode -1 for req 
+-SIZE AND TYPE OF h/w and protocol
+
+ARP REPLY:
+This is the reply packet sent from the router when we ping them , saying that i am having that ip addr and my mac addr is ...and when it is done for the first time an entry is created in arp cache to enable easy ping afterthat.
+
+REP PACKETS :
+
+-SRC ip- ip addr of src device;mac-mac addr of src;
+-target ip ;mac-the mapped mac addr of dst fetched from arp table
+-opcode -2 for reply 
+-SIZE AND TYPE OF h/w and protocol
+
+
+PING ROUTER TO FIND THE MAC ADDRESS :
+
+-When we  ping the router , we are giving the ip , that ip is known from the dhcp configuration so only the mac addr of default gateway is unknown which can be fetched using arp req.
+-and if there is already a ping done for the router means it is stored in the cache so we can't send arp req and get reply since the mapping is already stored.so i deleted the cache using 'sudo arp -d <router ip>'
+-we can again ping the router using its ip , if the ip is not known use ip route and take the default gateway ip address and then ping
+-Capture the arp packets in wireshark to analyze it
+-In the ARP packets we can find the mac address in the reply frame .
