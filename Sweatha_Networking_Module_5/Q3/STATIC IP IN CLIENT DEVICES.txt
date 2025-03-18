@@ -1,0 +1,18 @@
+STATIC IP IN CLIENT DEVICES:
+
+Here we have changed the ip of end devices , usually dhcp will be used to configure the ip dynamically . so if we want to change that we can do that using the following steps:
+
+-Go to the network tab in setting and choose the interface or wifi you are connected.
+-GO to the IPV4 tab and change the ip configuration from dynamic to static 
+-GIve the ip -eg:192.168.1.20,subnet :255.255.255.0,default gateway should be you routers ip , you can get this using ip route cmd .
+-Give the DNS ip as 8.8.8.8 (google)
+-Apply and reconnect to the interface , now your system should have the ip that  you have configured
+
+HOW TO CHECK THE MODIFIED IP :
+
+-Use 'ip a ' to check the modified ip 
+-we can see inet addr as the modified ip
+-We can ping the router ip again to check whether the static ip configuration have worked or not 
+
+
+

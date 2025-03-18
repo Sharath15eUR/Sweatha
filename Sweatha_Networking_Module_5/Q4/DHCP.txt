@@ -1,0 +1,51 @@
+DHCP :
+
+DHCP is the dynamic host configuration protocol which is used to dynamically get the IP address
+in a system.So it will undergo a DORA process, Discover , Offer, Request and Acknowledgement.
+So in the DORA process, the DHCP client  will send a request to the DHCP
+server stating that I need an IP to communicate and the DHCP server will respond with the
+offer message offering an IP to the client and the client have to accept the IP by sending
+an request message and the server can acknowledge that by confirming the IP address and other
+confirmation details to the client device.
+So this is the DORA process of the client asking for the IP to the DHCP server and
+then assigning an IP to it.
+
+
+So we want, if we want to analyze the packets in Wireshark, the DHCP packets and the DORA
+process, I have already connected to my home router FTTH.
+So if I shut down my Ethernet and then if I enable , I
+will get only the type 3 and type 4 of the DORA process that is the request and acknowledgement.
+This happens why because I have already connected to the Wi-Fi which is FTTH.
+So it will be stored.So when I try to connect it again, it will remember the network and it will undergo only
+the request and the acknowledgement process.
+
+
+So if I have to get all the DHCP DORA process entirely, I have to remove the connection
+entirely and then I have to again connect, then I have to again shut down my connection
+and then enable the Wi-Fi connection again.
+
+So if I want to do this, I can do using the DHCP client message, but in modern ubuntu they are, we are using network manager and system CTL .
+So for that we have to use system CTL command to remove the device connection.
+So using the system CTL like device connection delete, we can entirely remove the Wi-Fi connection
+from our device and then after removing that we have to like shut down our Wi-Fi connection
+and then we have to add the Wi-Fi connection again.
+
+
+We can, after that we can enable the  Wi-Fi .
+
+So if we do this, we can see all the four process in the wireshark capturing DHCP DORA
+packets entirely.
+
+So if we click the DORA like discover packet, we can see the type as one.
+So in the offer packets we can see the type two and request packet we can see the type
+three and acknowledge packet we can see the type four.
+
+
+So when I tried first for the first time, I got the error, I missed the first two process
+I only get the request and acknowledgement.
+So after studying, I get to know that we have to entirely remove the connection and
+then we have to connect it again to do this and we have to do one main step like we have
+to delete the lease file from the network manager since it stores all the previous Wi-Fi
+details or configuration details.
+So we have to remove that and we have to entirely remove the device connection and we have to
+again reconnect to the Wi-Fi and then we have to do the process.

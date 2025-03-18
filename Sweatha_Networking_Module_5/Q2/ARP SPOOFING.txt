@@ -1,0 +1,7 @@
+ARP SPOOFING :
+
+When we want to find the mac addr we will send arp req encapsulated in an ethernet frame  that is broadcasted to all the devices through the switch or access point and the corresponding device having that ip will unicast ARP reply with the mac addr to the req device.
+
+BUt any device can fake the reply pretending that i am the device having the ip you have sent in ARP req to steal the data or to disrupt the n/w traffic .This is ARP spoofing more like a man in middle attack . 
+
+

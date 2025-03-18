@@ -1,0 +1,34 @@
+ARP PACKETS :
+Address resolution protocol - this protocol helps to map the ip and MAC address .So when we ping any device inside the same LAN  it helps to find the mac address using the arp table .It works at layer 2 that is datalink layer.Everything is based on MAC addr in ethernet n/w so we have to map it to the respective IP to communicate with the device since in layer 3 everything works using IP address . ARP acts as a bridge bt these to enable the communication .
+
+TYPES OF PACKETS :
+ARP REQ:
+This is sent when the device wants to find the MAC addr , ip is already known.The ip is known by the DHCP mechanism so the system will send ARP req to find the mac addr of the router if we try to ping our home router . 
+
+REQ PACKETS :
+
+-SRC ip- ip addr of src device;mac-mac addr of src;
+-target ip ;mac-00.00.00.00.00.00 (mac addr is unknown)
+-opcode -1 for req 
+-SIZE AND TYPE OF h/w and protocol
+
+ARP REPLY:
+This is the reply packet sent from the router when we ping them , saying that i am having that ip addr and my mac addr is ...and when it is done for the first time an entry is created in arp cache to enable easy ping afterthat.
+
+REP PACKETS :
+
+-SRC ip- ip addr of src device;mac-mac addr of src;
+-target ip ;mac-the mapped mac addr of dst fetched from arp table
+-opcode -2 for reply 
+-SIZE AND TYPE OF h/w and protocol
+
+SRC IP & MAC:
+this is the device which ping the router searching for the mac addr of router to communicate.
+
+THE ERROR I HAVE FACED :
+
+-So when i tried ping google i dont see any packets captured in wireshark with protocol ARP . Then i came to know that ARP is used to find mac addr of the devices in the same LAN.
+-but we can ping our home router to check the arp packets
+-When we  ping the router , we are giving the ip , that ip is known from the dhcp configuration so only the mac addr of default gateway is unknown which can be fetched using arp req.
+-and if there is already a ping done for the router means it is stored in the cache so we can't send arp req and get reply since the mapping is already stored.so i deleted the cache using 'sudo arp -d <router ip>'
+-If we ping google.com the DNS will resolve the name to ip , then the ip is sent to routing table to check if it is in the same lan , if not it is sent to ROUTER . FOr that the sys needs router mac addr . There we need ARP then we can communicate with router and router will frwd it to the google's public server .

@@ -1,0 +1,177 @@
+192.168.1.0/24  
+- Subnet Mask: 255.255.255.0  
+- Total IP Addresses: 
+  - /24 means there are 32 – 24 = 8 bits left for hosts  
+  - Total addresses = 2⁸ = 256  
+  - Valid host addresses = 256 – 2 (network & broadcast) = 254
+
+Divide into 4 Subnets
+
+- 4 = 2², we need to borrow 2 bits from the host.
+
+
+- Borrow 2 bits →/24 + 2 = /26
+
+
+
+- /26 means 26 bits are used for the network portion.
+- The new subnet mask 
+  - Binary: 11111111.11111111.11111111.11000000 
+- New Subnet Mask:255.255.255.192
+
+
+- Number of host bits = 32 – 26 = 6 bits  
+- Total addresses per subnet = 2⁶ = 64  
+- Valid host addresses = 64 – 2 = 62
+
+
+
+ Subnet Ranges
+
+A /26 network means the subnets will increase in increments of 64 addresses.  
+
+
+Subnet 1:
+- n/w- 192.168.1.0  
+- broadcast addr -192.168.1.63  
+-  Host Range- 192.168.1.1 to 192.168.1.62
+
+Subnet 2:
+- network Address- 192.168.1.64  
+- Broadcast Address-192.168.1.127  
+- Host Range- 192.168.1.65 to 192.168.1.126
+
+Subnet 3:
+- Network Address- 192.168.1.128  
+- Broadcast Address- 192.168.1.191  
+-  Host Range- 192.168.1.129 to 192.168.1.190
+
+Subnet 4
+- Network Address- 192.168.1.192  
+- broadcast Addr- 192.168.1.255  
+- Host Range-192.168.1.193 to 192.168.1.254
+
+
+
+## 4. Assign IP Addresses in Cisco Packet Tracer
+
+### A. Configure the Router
+
+For proper routing between subnets, you’ll need a router with multiple interfaces (or subinterfaces) to act as the gateway for each subnet.
+
+Assume you have a router with four FastEthernet interfaces:  
+1. **Interface Fa0/0 (Subnet 1):**
+   - IP: 192.168.1.1  
+   - Subnet Mask: 255.255.255.192
+
+2. **Interface Fa0/1 (Subnet 2):**
+   - IP: 192.168.1.65  
+   - Subnet Mask: 255.255.255.192
+
+3. **Interface Fa0/2 (Subnet 3):**
+   - IP: 192.168.1.129  
+   - Subnet Mask: 255.255.255.192
+
+4. **Interface Fa0/3 (Subnet 4):**
+   - IP: 192.168.1.193  
+   - Subnet Mask: 255.255.255.192
+
+#### Example Router CLI Commands:
+```plaintext
+Router> enable
+Router# configure terminal
+! Configure Subnet 1 interface
+Router(config)# interface fa0/0
+Router(config-if)# ip address 192.168.1.1 255.255.255.192
+Router(config-if)# no shutdown
+Router(config-if)# exit
+! Configure Subnet 2 interface
+Router(config)# interface fa0/1
+Router(config-if)# ip address 192.168.1.65 255.255.255.192
+Router(config-if)# no shutdown
+Router(config-if)# exit
+! Configure Subnet 3 interface
+Router(config)# interface fa0/2
+Router(config-if)# ip address 192.168.1.129 255.255.255.192
+Router(config-if)# no shutdown
+Router(config-if)# exit
+! Configure Subnet 4 interface
+Router(config)# interface fa0/3
+Router(config-if)# ip address 192.168.1.193 255.255.255.192
+Router(config-if)# no shutdown
+Router(config-if)# exit
+```
+
+### B. Configure the End Devices (PCs)
+
+Assign IP addresses to PCs from each subnet. Also, set the default gateway of each PC to the IP address of the router interface for that subnet.
+
+For example:
+- **PC in Subnet 1:**
+  - IP Address: 192.168.1.10 (any valid host between .1 and .62)
+  - Subnet Mask: 255.255.255.192
+  - Default Gateway: 192.168.1.1
+
+- **PC in Subnet 2:**
+  - IP Address: 192.168.1.70 (any valid host between .65 and .126)
+  - Subnet Mask: 255.255.255.192
+  - Default Gateway: 192.168.1.65
+
+- **PC in Subnet 3:**
+  - IP Address: 192.168.1.134 (any valid host between .129 and .190)
+  - Subnet Mask: 255.255.255.192
+  - Default Gateway: 192.168.1.129
+
+- **PC in Subnet 4:**
+  - IP Address: 192.168.1.198 (any valid host between .193 and .254)
+  - Subnet Mask: 255.255.255.192
+  - Default Gateway: 192.168.1.193
+
+### C. Connect the Devices
+
+- Use appropriate cables (copper straight-through) to connect each PC to a switch.  
+- Connect the switch to the router.
+
+---
+
+## 5. Verify Connectivity Using Ping
+
+### A. From a PC in one subnet, try pinging:
+- The default gateway for that subnet (to verify local connectivity).  
+- A PC in another subnet (to verify that routing is working).
+
+### B. Example:
+- On a PC in Subnet 1 (say IP 192.168.1.10), open the command prompt and type:
+  ```plaintext
+  ping 192.168.1.1  (should succeed – local gateway)
+  ping 192.168.1.70 (a PC in Subnet 2; this should succeed if the router routes correctly)
+  ping 192.168.1.134 (a PC in Subnet 3)
+  ping 192.168.1.198 (a PC in Subnet 4)
+  ```
+
+### C. Troubleshooting:
+- **If pings fail:**
+  - Verify that each PC’s IP configuration (IP, Subnet Mask, Gateway) is correctly set.
+  - Check that router interfaces are in the “no shutdown” state.
+  - Confirm that the router has a routing table entry for each directly connected subnet (this should happen automatically if interfaces are configured).
+
+---
+
+## 6. Summary
+
+- **Original Network:** 192.168.1.0/24 (254 hosts)
+- **Divide into 4 Subnets:**  
+  - Borrow 2 bits → New subnet size: /26  
+  - New Subnet Mask: 255.255.255.192  
+  - Hosts per subnet: 62 valid hosts  
+- **Subnets Breakdown:**
+  - **Subnet 1:** 192.168.1.0 – 192.168.1.63 (Valid: .1–.62)
+  - **Subnet 2:** 192.168.1.64 – 192.168.1.127 (Valid: .65–.126)
+  - **Subnet 3:** 192.168.1.128 – 192.168.1.191 (Valid: .129–.190)
+  - **Subnet 4:** 192.168.1.192 – 192.168.1.255 (Valid: .193–.254)
+- **Setup in Packet Tracer:**
+  - Configure router interfaces with the gateway IPs for each subnet.
+  - Assign PCs an IP from the valid range of each subnet and set the corresponding default gateway.
+- **Verify:** Use ping between devices in different subnets to ensure that the router routes packets correctly.
+
+By following these detailed steps, you can divide the 192.168.1.0/24 network into 4 subnets, assign IP addresses manually, and verify connectivity in Cisco Packet Tracer. Let me know if you have any questions or need further clarification!

@@ -1,0 +1,63 @@
+PINGING EXTERNAL IP ADDRESS USING NAT:
+
+I have created a small network using two PC's and one switch and one router and to
+simulate the public server. 
+I have included one server and for the PC0 and PC1 I have
+configured the IP address and the subnet mask and the default gateway and I have added the switch and for the router I have defined the Gigabit Ethernet 0 / 0 interface with the private IP address that is the default gateway I have given in the PC's and Gigabit Ethernet 0 / 1 I have configured it with the public IP address that is the 10.0.0.1 and I have connected the two PC's with the switch using straight copper through table and I have connected the router with the switch using the copper straight cable and I have connected the switch with the interface Gigabit Ethernet 0 or 1 and I have included one server Pt with the
+router and connected through the copper straight through cable and it is connected to the interface
+Gigabit Ethernet 0 or 1 and I have configured the server IP address as 10.0.0.2 we can configure
+this with any address but the IP address should be in the same network of the public IP of
+the router which we have given as 10.0.0.1 so I have configured the server IP address as
+10.0.0.2 and I have to give the submit mask and the default gateway as the public IP of
+router so first I have got an error stating that we can't ping or we request timeout so
+I have studied about this and I came to know that we can't use Cisco packet tracer to connect
+with external network or the internet so we can't ping the Google server from the Cisco
+packet tracer so we can communicate only within the network we have built inside the Cisco
+packet tracer so we cannot frame the entire ISP or the internet service provider system
+which we use in real time in the Cisco packet tracer so I just have configured the server
+with an IP address as the same network of router and also the default gateway of the server
+should be the public IP of router to send the reply packets from server to the router's
+public IP I have configured like that so if we ping from the PC0 the server's IP address
+we should be able to get the reply packets in Cisco packet tracer we can't communicate with
+the server which is not in the network of the router domain so we should be like aware that
+we have to use the same network addresses and to capture the packets in the and also
+we have to configure the NAT which is the network address translation so in the router
+CLI we have to give the access list so access list is something that we give the private
+IP of the router in the access list to add them in the NAT so whichever IP address or
+in the access list will be used for the network address translation so we have to add the network
+IP private IP network and the wildcard mask to the access list by using the command access
+list 1 the network IP of the router 192.168.1.0 and the wildcard mask wildcard mask is nothing
+but the opposite of the subnet mask so first 3 octets will be fixed in class B so I have used
+0.0.0 and 0.255 so we should be given this and after this we have to tell the router that you
+have to use the access list 1 to enable the NAT to the router external interface which is the
+Gigabit Ethernet 0 or 1 so we should use the command IP NAT inside source list 1 interface
+Gigabit Ethernet 0 or 1 overload so here the source refers to the source IP address so the source IP
+address should be forwarded externally using the NAT and also we have used the overload to
+enable the port address translation so we are connecting multiple IPs which is in the access
+list to a single public IP with different port combinations so whenever packet is coming to
+the router and it is not in the LAN it will check for the public it will route to the public IP
+and the public IP will route to the ISP but it will route using the NAT and also it uses a
+port combination different port combinations with this and if ISP receives the request and ISP
+will transmit it to the Google server or any other server so the reply packet from the Google
+server will get in the ISP and ISP will send to the routers public IP so it will differentiate by
+the port allocation so which private IP sends the request it will have a different port so we
+can send the reply packet to that specific port to the public IP and then to the public IP we
+can identify which private IP have requested so we can send the packet written after configuring
+this we can ping the IP address of server from the PC0 and to capture the packets in the
+wire shark we can simulate ping from the system command prompt Google server ping 8.8.8.8 and
+we can analyze the packets in wire shark by using a capture filter ICMP and you can also
+use the display filter as the IP source address as your PC source IP address and destination IP
+as 8.8.8.8 but in wire shark we are not able to see the after NAT source IP address it will
+display only the before NAT source IP address which is your PC's IP so to know the after NAT
+source IP address we can go and give the command to show mtr 8.8.8.8 giving that command we can
+analyze how many hops or what are the IP addresses it has undergone to reach the DNS Google server
+so in this also we cannot see the public IP of router why because it routes the packet from
+the private IP and we can only see the Google's public IP next hop of the Google's public IP
+like that and if we use the trace on command also it will show only the first hop and the last hop
+to reach the Google server the intermediate hops are ignored when you when we use the trace
+command for ping so the only way to see the like mixed public IP routers is in Cisco packet
+racer we can see the show IP NAT translations command we can see the source IP address has changed
+from the private IP to the public and then the packet has been forwarded to the server
+so using this we can analyze and acknowledge the NAT translations and how the source IP is changing
+from the private to the public whenever a packet or a packet have come and it has to be forwarded
+to the external network we can analyze those things using the Cisco packet racer and wire start

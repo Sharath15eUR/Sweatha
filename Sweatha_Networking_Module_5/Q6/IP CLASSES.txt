@@ -1,0 +1,87 @@
+1)10.1.1.1
+
+CLASS :
+This belongs to class A since the first bit in ip is 10 which falls bt 1 to 126 ie for the class A
+
+SUBNET MASK:
+255.0.0.0/8 - first octet is fixed for the n/w address , and other 3 will be used for host networks
+
+VALID IP RANGE :
+10.0.0.0 - n/w addr
+10.255.255.255 - broadcast addr
+10.0.0.1 to 10.255.255.254 -valid ip address range
+
+TOTAL ip addr = 2^24-2 since first 8 bits will be used for n/w addr and remaning 24 will be for host addr.
+subtracting 2 for n/w and broadcast addr.
+
+
+2)172.16.5.10
+
+CLASS :
+This belongs to class B since the first bit in ip is 172 which falls bt 128 to 191 ie for the class B
+
+SUBNET MASK:
+255.255.0.0/16 - first two octets are fixed for the n/w address , and other 2 will be used for host networks
+
+VALID IP RANGE :
+172.16.0.0 - n/w addr
+172.16.255.255 - broadcast addr
+172.16.0.1 to 172.16.255.254 -valid ip address range
+
+TOTAL ip addr = 2^16-2 since first 16 bits will be used for n/w addr and remaning 16 will be for host addr.
+subtracting 2 for n/w and broadcast addr.
+
+3)192.168.1.5
+
+CLASS :
+This belongs to class C since the first bit in ip is 192 which falls bt 192 to 223 ie for the class C
+
+SUBNET MASK:
+255.255.255.0/24 - first 3 octets are fixed for the n/w address , and other 1 will be used for host networks
+
+VALID IP RANGE :
+192.168.1.0 - n/w addr
+192.168.1.255 - broadcast addr
+192.168.1.1 to 192.168.1.254 -valid ip address range
+
+TOTAL ip addr = 2^8-2 since first 24 bits will be used for n/w addr and remaning 8 will be for host addr.
+subtracting 2 for n/w and broadcast addr.
+
+
+CONCEPTS I HAVE LEARNED IN STUDYING THIS :
+
+IP addresses are classified into 5 classes A, B, C, D and E. So A, B, C will be used most
+popularly for the large networks and B for the medium size and C for the small networks.
+But D and E will be used for the multicast purpose and experimental purpose.
+So in class A, if the first target will be fixed, so in binary we will say that first
+bit is fixed which is 0 - 00000001 to 01111110
+So first starting bit will be the 0 and starting from 1, we are going to have the number ranging
+from 1 to 126.So the 8 bits it is for the network which is fixed 1, the other remaining 24 bits,
+so totally we will be having 32 bits, so other 24 bits will be used for the host networks.
+So the default subnet mask will be 225.0.0.0, so which is first will be the fixed 1 and
+the number of host addresses will be range from 2 power 24 and we will minus 2 from 2
+power 24.Because we have to allocate one for the network and one for the broadcast address.
+
+
+So in class B, we will have the two bits fixed in binary that is 10, other bits will
+be 0 and when we want to display the ending address, we will change all the zeros apart
+from the first two bit as 1-10000000 to 10111111 So the IP, so the numbers range from 128 to 191 when we convert the binary into a decimal
+1 in class B.So 16 bits will be used for the network since two octets are fixed and the remaining 16
+from the 32 bits will be the 16, so the remaining 16 will be used for the host network and the
+default subnet mask will be 255.255.0.0 which means the first two octets are fixed here.
+So here 2 power 16 is the host address, number of host address and we have to minus 2 for
+the network and broadcast.
+
+
+In class C, the first three bits will be filled in the binary which is 110 and the other
+bits will be 0 - 11000000 and for the end address, end range we have to convert all the zeros other
+than the first three bits to 1 -11011111 and when we convert this binary to decimal, it will have
+the numbers from 192 to 223.
+So all the numbers including these will be the class C and first 24 bits will be used
+for the network and the remaining 8 bits for the host and the subnet mask will be 255.255.255.0
+and the host address, number of host address will be 2 power 8 and we have to minus 2 for
+the network and the broadcast address.
+So if you want to find any IP address which is like which it belongs to which class and
+their subnet mask and their network range of IP address, we have to find the first octet
+is belongs to what class and then we have to frame the network address, broadcast address
+and the valid IP range of the network.
