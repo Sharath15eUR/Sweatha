@@ -32,9 +32,9 @@ BASIC SWITCH OPERATION :
 1)We are going to create a basic operation using switch,bridge and interfaces
 2)Creating a bridge and interfaces
 -->ip link add name br1 type bridge
--->ip link swt eth0 master br1
+-->ip link set eth0 master br1
 -->ip link set wlp1s0 master br1
 -->ip link set br1 up
 
-2)We can check the device list to know about the devices connected
--->
+3)ping the devices
+4)use 'bridge fdb show' to see the learned mac table	
