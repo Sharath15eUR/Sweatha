@@ -1,0 +1,91 @@
+DEVICES CONNECTED TO WIFI :
+
+I am using laptop , smartphone , tablet and android tv in my day to day life with wifi . to show their properties like freq bandwidth , speed , etc we can use some terminal commands 
+
+-iwconfig --it allows us to learn more about the wifi properties and their configuration details
+
+-there are df wifi gen and their ieee std 
+
+->802.11 - 2mbps --wifi 1 (very slow)
+
+->802.11b - 11mbps --wifi 2 (better speed)
+
+->802.11a/g - 54mbps --wifi 3 (it provided dual band support)
+
+->802.11n - 600 mbps --wifi 4 (multiple antennas were there)
+
+->802.11 ac- 3.5 gbps --wifi 5 (implemented multiple ip and op for better speed)
+
+->802.11 ax - 9.6 gbps --wifi 6 (Btter performance in crowded areas)
+
+->802.11 be - 46 gbps --wifi 7 (allows  transmission from multiple frq bandwidth)
+
+-if i give 'iwconfig'cmd :
+
+--------------------------------------------------------------
+OUTPUT :
+
+wlp1s0    IEEE 802.11  ESSID:"FTTH"  
+          Mode:Managed  Frequency:2.432 GHz  Access Point: 54:47:E8:7F:F7:53   
+          Bit Rate=216 Mb/s   Tx-Power=3 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=70/70  Signal level=-40 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+
+-------------------------------------------------
+- the 802.11 indicates the wifi std we are using and mode is telling that this device acts as the client which is connected to the router or access point 
+
+-the freq 2.432 ghz indicates that i am using wifi 4 802.11n and the bit rate is 216 mbps which is the speed of wifi
+
+-and the link quality is good and signal level is -40 which falls wnder -30 to -50 excellent range 
+
+-and there were no loss of packets in the connection , it is stable 
+
+
+-'iwlist wlp1s0 freq'
+
+--it tells the available freq for that wifi 
+
+--and i got 5 ghz in the op so my wifi device can support 802.11 ac or higher also 
+
+--------------------------------------------------------------------
+sweatha@sweatha-HP-Pavilion-Laptop-15-eg2xxx:~$ iwlist wlp1s0 freq
+wlp1s0    32 channels in total; available frequencies :
+          Channel 01 : 2.412 GHz
+          Channel 02 : 2.417 GHz
+          Channel 03 : 2.422 GHz
+          Channel 04 : 2.427 GHz
+          Channel 05 : 2.432 GHz
+          Channel 06 : 2.437 GHz
+          Channel 07 : 2.442 GHz
+          Channel 08 : 2.447 GHz
+          Channel 09 : 2.452 GHz
+          Channel 10 : 2.457 GHz
+          Channel 11 : 2.462 GHz
+          Channel 36 : 5.18 GHz
+          Channel 40 : 5.2 GHz
+          Channel 44 : 5.22 GHz
+          Channel 48 : 5.24 GHz
+          Channel 52 : 5.26 GHz
+          Channel 56 : 5.28 GHz
+          Channel 60 : 5.3 GHz
+          Channel 64 : 5.32 GHz
+          Channel 100 : 5.5 GHz
+          Channel 104 : 5.52 GHz
+          Channel 108 : 5.54 GHz
+          Channel 112 : 5.56 GHz
+          Channel 116 : 5.58 GHz
+          Channel 120 : 5.6 GHz
+          Channel 124 : 5.62 GHz
+          Channel 128 : 5.64 GHz
+          Channel 132 : 5.66 GHz
+          Channel 136 : 5.68 GHz
+          Channel 140 : 5.7 GHz
+          Channel 144 : 5.72 GHz
+          Channel 149 : 5.745 GHz
+          Current Frequency:2.432 GHz (Channel 5)
+
+--------------------------------------------------------------

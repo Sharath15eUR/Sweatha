@@ -1,0 +1,25 @@
+ACCESS POINTS 
+
+-Access points are used to enable the wireless devices to connect to a wired network. 
+-So it enables the communication between the wireless devices and the wired network
+
+MAIN FUNCTIONS 
+
+-the main purpose is it is connected to a wired LAN and it sends the signals like radio signals which the devices captures to connect it to the internet. 
+
+-So how a device connects to the router through AP is the AP assigns unique IP address to all the devices in the network to gain them access for a router .
+
+-APs can handle multiple devices at the same time so to ensure smooth connection between them .
+
+-it supports that the multiple input multiple output technology to enable the connections between multiple users at the same time in the network .
+
+-in a large network user can switch from one AP to another AP we have seen that in ESS concept in the assignments and without losing any connection we can
+switch from one AP to another AP .
+
+-we can also like log the details of AP's connected devices signal strength and with frequency etc in the log , it helps like the admin or the one who in the network administration role and can use that for any troubleshoot activities. 
+
+-So in overall the main functionality of AP is it will be connected to a wired LAN and it expands that wired LAN to be connected to multiple number of users and multiple
+number of devices to provide a seamless connection  to a Wi-Fi connection.
+
+-through the access point we can connect to the wired LAN multiple devices multiple users can connect to the wired LAN at the same time and there
+will be a reliable secured connections.

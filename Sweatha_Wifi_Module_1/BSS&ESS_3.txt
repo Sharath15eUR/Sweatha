@@ -1,0 +1,28 @@
+BSS AND ESS :
+
+-There are different network configurations in Wi-Fi, so one is a BSS basic service set and the other is an ESS extended service set in Wi-Fi.
+
+-basic service set BSS :
+
+--so it is the smallest unit of the Wi-Fi network
+-- it has one access point that is the Wi-Fi router device and multiple connected devices 
+--it covers only specific area, that is it is limited to a small range of area.
+--These are the three main things in the BSS and each BSS will have a unique ID to identify the BSS in a network,  which is called as basic service set identifier 
+--BSSID  will be usually the MAC address of the access point we are using.
+
+--So types of BSS,
+
+-> infrastructure BSS :the most common type, so devices will be connected to an access point and the access point controls communication between those devices and
+->independent BSS :no access point is used, the devices are directly connected to the other devices and it is used for a temporary connection between those two devices like file sharing through remote or something like that but there would be any access point in between them to enable the wireless connections for a permanent one.
+
+-ESS
+
+--The external service set is a collection of like multiple basic service set so it will be like I provide a larger cover area for the network and it consists of
+like multiple access points. 
+--In BSS we have the single access point and here we can have multiple access point to the same network which means that we can make a like connection between the APs with the devices in a roaming state like without losing the connections .
+--we can move  devices between one AP to another AP and like how this happens is it tracks the same SSID same like session identifier for the Wi-Fi network name and which allows the seamless movement when we move from one AP to another AP without losing any data and connection.
+
+--For example if you have a college institution there we have so many Wi-Fi access points which will be connected to a  same wired LAN so if we move from room A to room B we have different Wi-Fi but we cannot like interrupt the Wi-Fi connectivity to the device so here we have the BSS in each room and which connects those BSS to  ESS 
+--if we move from one room to another room the connection is not interrupted and it is seamlessly communicated using these ESS 
+--if you move from one room to another it will automatically switch from one AP to another AP without losing any connection between them. 
+--So BSS will not be suitable for the roaming purpose or for the larger area network like for larger institutions or organizations which all can be done using the ESS since it has multiple AP support with it.
