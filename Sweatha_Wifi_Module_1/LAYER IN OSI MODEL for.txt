@@ -1,0 +1,39 @@
+LAYER IN OSI MODEL for WIFI STANDARD:
+
+Wifi (wireless n/w) works at 2 layers , one is physical layer and other one is data link layer .
+
+PHYSICAL LAYER :
+
+-here the digital data is sent to the physical medium as radio signals which flows through the air 
+-this layer usually transmits the raw data and it controls the shared physical medium
+-the conversion of digital data to wireless signals i done here
+-ANd this layer also controls the speed at which the data is transmitted
+-it uses orthogonal freq division multiplexing and division sequence spread spectrum to convert digital data to signals
+-in overall it controls send and receive of wireless signals and the speed and distance the data goes 
+
+
+DATA LINK LAYER :
+
+-this layer helps in framing of data , flow and error control , who can access the data to avoid collision 
+-it has 2 sublayers : mac and llc
+
+MAC :Medium access control layer
+
+-it controls who can send the data in the n/w to avoid the interference
+-and it assigns the mac address which is the primary work of this layer
+-it uses collision avoidance because in wireless communication we cant detect the collision since we don't know who sent the data to detect , instead we can avoid collision
+-this is done by device will check for idle medium if idle it sends its data if not it waits for a random time and then again checks
+-random time waiting is the key here if both device wait for same time and again check means it will be a collision 
+-so we use csma here to avoid collision
+
+
+
+LLC: Logical link control layer
+
+-it checks the error and check for any error bits 
+-it also controls the flow of data to ensure the data is sent and received in the correct sequence
+-using this we can provide a smooth sending and receiving of data 
+
+
+
+Overall , these 2 layers are used to send and receive the data fast , smooth and reliable thorugh wireless transmission in wifi .
