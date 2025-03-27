@@ -1,0 +1,17 @@
+BRIDGE AND REPEATER :
+
+we have already studied about these in the networking training . these two are used in modifying the connections of a n/w.
+
+BRIDGE :
+-this is used to combine two df n/w and make them behave as a single n/w.
+-when we have two df n/w and devices in that want to connect we can connect them to bridge and make them as a single n/w .
+-so devices can communicate as if they were in the same n/w , mostly used for the wired n/w
+
+EG : device from one office to another each having separate n/w can be communicated through a brige
+
+REPEATER:
+-this is used to amplify the weak signals from the wifi in a n/w , it extends the wifi range (mostly for wireless transmissions)
+-if the signal is poor we can use a repeater which amplify and strengthen the signals
+-but the only problem here is if the poor signal has some noise , the noise will also get amplified which makes the signal more worse.
+
+EG: if signal in one room is good and other has poor wifi means we can use this to amplify the wifi signal

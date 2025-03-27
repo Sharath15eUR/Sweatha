@@ -1,0 +1,20 @@
+IEEE 802.11 a vs IEEE 802.11 b
+
+802.11 a:
+
+FREQ:5GHZ
+SPEED:54 mbps ; it is faster than 802.11 b useful for video stream ,huge file download
+RANGE:shorter range;high freq are blocked by walls so shorter range
+INTERFERENCE:low;since 5GHZ is less crowded and not commonly used by the people
+COST:very expensive ;high speed and low interrupt make it more costly
+USAGE:used in large industry where high speed req
+
+
+802.11 b:
+
+FREQ:2.4GHZ
+SPEED:11mbps ; slower than 802.11 a
+RANGE:longer range; since it has a low freq it can be travelled to longer range
+INTERFERENCE:more interfernece since it is a most common one used by people and can interfered by any otehr devices bluetooth etc..
+COST:low cost and suited for home and office cost effective use
+USAGE:used in home , office for better range and low cost 

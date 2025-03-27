@@ -1,0 +1,19 @@
+IEEE vs WFA :
+
+IEEE-Institute of electrical and electronics engineers:
+
+-It is a worldwide organization which provides the tech standards for various domain technologies like n/w , wifi , etc
+-It framed the 802.11 std for wifi technology (802.11 a , 802.11 b etc)
+-It tells how that technology should function and their subcategories 
+-here the persons involved will be the members of any organization 
+
+
+WFA wifiAlliance :
+
+-It is a non profit organization which provides the quality certificate for the products more like a quality checker
+-It ensures the wifi devices follows 802.11 the standard developed by IEEE to make them work together seemlessly
+-it test the product whether it ensure the ieee standards and certifies it for wifi compliance 
+- here the people involved will be the company taht manufacture the product wifi
+
+
+Both are req in the field of wifi to enable a reliable quality data transmission

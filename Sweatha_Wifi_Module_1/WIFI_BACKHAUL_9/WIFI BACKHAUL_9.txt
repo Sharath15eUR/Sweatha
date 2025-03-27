@@ -1,0 +1,49 @@
+WIFI BACKHAUL:
+
+Backhauls are used to connect the isp modem to the access points which enable the devices to connect to the internet
+
+TYPES :
+- FIbre optic:
+--it uses fibre optic cables for the data transfer
+--and it provide like avery reliable connection
+--ANd here the speed will be very high 
+--large city , college will have this type
+
+
+-Ethernet :
+--it uses physical wires to connect to routers
+--lesser speed than fibre optic
+--it is used in offices , home , colleges
+
+-P2P(point to point):
+--Uses signals to directle connect the end to end devices
+--low speed
+--it can be affected by weather and can be interfered by the other signals
+--rural areas where we can't make like physical cables we can use this 
+
+-cellular:
+--uses mobile n/w to provide the connection
+--here reliability depends on signal strength
+--for temp set up and remote conn we can use this
+
+-satellite:
+--uses satellite to provide the conn
+--here data loss will be very high since the satellites are far away
+--reliability can also get affected by the weather conditions
+--used for discovering disasters , locate ships etc
+
+
+BACKHAUL USED AT :
+
+COLLEGE: Ethernet in labs 
+--In my pov , ethernet is used because of its stable connection
+--it is not interfered with any other signals
+--low latency so the practical problems will be solved effectively
+--it is more secure since wired one and no drops of data irrespective of distance
+
+HOME : dsl ethernet
+--MY home router conn is dsl broadband which uses copper line to give the internet
+--The BSNL copper line will connect the internet with dsl modem and from which the wifi router is connected to the devices 
+--ethernet is used bt the modem and router
+--i found this by ifconfig -a cmd and i saw the type ethernet 
+--in the whatismyip awebsite i entered my public ip and found that the n/w speed is managed through the dsl

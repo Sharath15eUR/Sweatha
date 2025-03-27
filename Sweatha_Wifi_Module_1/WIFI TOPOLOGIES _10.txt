@@ -1,0 +1,46 @@
+	WIFI TOPOLOGIES:
+	
+	1.BSS : Basic service set
+	-It uses a single access point to connect all the devices 
+	-It is the infrastructure mode and for shorter range
+	
+	USECASES:
+	
+	--Home - connect phone , tv ,tab to a single ap
+	--officee wifi 
+	--any public building wifi like mall , cafe , resort etc
+	
+	2.ESS :Extended service set
+	-Multiple ap's are used for conn
+	-users can roam from one ap to other without dropping the connection
+	-covers a larger range
+	
+	USECASES:
+	--Large office 
+	--hospitals
+	--airports
+	
+	
+	3.Independent BSS- Adhoc mode:
+	-Devices communicate directly without ap
+	-it forms a p2p n/w for temp conn
+	
+	USECASES:
+	--for temp file sharing remote conn
+	
+	4.mesh wifi n/w:
+	-many aps interconnected will work as together
+	-each ap is a relay which increase the coverage
+	
+	USECASES:
+	--for rual areas without cables , providing the net through this
+	
+	5.Direct wifi - connecting through direct without ap
+	 --without net casting tv using phone
+	 
+	6. p2mp
+	-one central ap connects multiple locations 
+	
+	USECASES:
+	--connect cctv wihtout cables 
+
