@@ -1,0 +1,23 @@
+CHALLENGES IN LARGE AUTONOMOUS AP's:
+
+-INterfernce 
+when we have more no.of ap's the traffic may get congested and interfered with another one , which in turn slow the data speed and we can use proper channels to overcome this
+
+-Handling roaming
+when user move from one ap to other in university it is difficult to ensure the smooth conn over the devices wihtout any data loss
+
+-Attacks
+More no.of ap's will result in more vulnerability to attacks by the hacker , so it is very challenging to secure the n/w
+
+-Position & power
+we have to place all the ap's inside the university such that there is no area without wifi and we need such huge power source to provide a large num of ap's. since inadequate power supply will make the ap to fail
+
+-load balancing
+very imp one , to balance the laod bt every AP's , if not  properly balanced the speed will be low and some ap's will not used at all
+
+-N/w troubleshoot
+the maintanence and troubleshooting will be difficult in a huge num of ap's , and so for fixing any issues by the admin
+
+
+-Cost
+setting up 50 + AP's require a huge investment to provide secured, faster , qos enabled service in the n/w

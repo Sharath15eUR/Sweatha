@@ -1,0 +1,17 @@
+WAN WLC :
+
+When WLC is located very far that is in a WAN n/w ,the ap's are controlled from very far away 
+
+BEST AP MODE - flex connect mode:
+
+-when we use default mode , the ap is dependent on the WLC entirely , it sends all the data , authentication of users , etc to wlc
+-so wan fails means the ap will not communicate with wlc so nothing can be done here
+-If we use flexconnect mode , and wan fails sometime , AP can still make a local connection in the n/w and provide the local devices a wifi connection 
+-it can work wih or without wlc
+-it send the local traffic to the n/w itself than sending everything to the wlc 
+-here if WAN is okay , wlc authenticate and proces data sent by AP
+-If wan is down , it switch to local standalone mode and can manage to provide wifi to the local devices instead of sending it to the wlc
+
+
+SO , flexconnect mode is best when wan connection is failed between wlc and ap in the wireless n/w.4
+

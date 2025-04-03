@@ -1,0 +1,28 @@
+CAPWAP :
+
+-It is a protocol that is used to like manage the communication between the access point and the wireless LAN controller.
+-So basically what it does is, it will manage the data transmissions and the security encryption
+
+-The AP will send a CAPWAP discovery request to the WLC and WLC will reply with the discovery response and then after the receiving of discovery response, the AP will then send a join request
+-then the CAP-UP discovery WLC will authenticate the joint request and if it is a secured one then it will send the join response for the AP to connect with that particular WLC.
+-And if that AP is an old one the WLC will also send the updated versions and other configuration  and then the WLC will send their Wi-Fi settings, their SID, their encryption, VLAN etc to the AP.
+-And then the data traffic will be sent and AP encapsulates the data through the CAPWAP data packets and it send it to the WLC and in turn also the WLC will process the data
+and it will send it throughout traffic through the CAPWAP 
+-and the AP will regularly send like heartbeat messages such that it is telling that I am actively connecting to the particular
+WLC.If it loses any connection to the WLC it tries to reconnect to the WLC again.
+
+
+MAINTANENCE:
+
+-Separated traffic 
+--for control traffic they use only datagram transport layer security DTLS and for data they use the wlc
+
+-Heart beat msg
+--the ap will send a live msg frequently , if the wlc didn't receive the msg they will get disconnected
+
+-Dynamic discovery
+--if the conn between ap and wlc fails , the AP will look for another wlc automatically 
+
+-Retransmitting
+--CAPWAP tunnel retransmit the lost messages to overcome data loss
+

@@ -1,0 +1,32 @@
+LIGHTWEIGHT AP's & CLOUD BASED AP's
+
+LAP :
+
+-So lightweight APS are dependent on the WLC wireless LAN controller. 
+- all the lightweight APS are controlled by a single centralised wireless LAN controller and it does not work independently.
+-it requires a WLC to configure them and to control them and lightweight access point will forward all the network traffic, all the data traffic to the WLC. 
+-The WLC only controls and manages all the data in the network. So the network administrators can log in to the WLC and they can configure or they can manage or they can control all the Ap's through the WLC. 
+-here there will be a centralised management which is the WLC and the scalability will be less. So if we want to access more aP's under a single WLC, we have to update the WLC to a more scalable one.
+-And it is not a cloud managed one. So it all requires a manual configuration and manual installation of a WLC to all the lightweight access point connected to it.  
+-So it provides a better secure and there will be a lower latency since like central WLC is enough for managing all the APS
+-the data loss will be less here 
+
+
+cloud based APS:
+
+-So this is the AP which is managed and controlled by the cloud portal.
+-it is entirely controlled by a cloud resource and there is no need of manual installation or centralized controller 
+-the network admin status can log into the cloud dashboard and then they can configure or control the APS through remote one.
+-And it is it does not limited to the scalability. So it provides a vast amount of scalability so that more number of aP's can be connected to a single controller.
+-So here we can provide a remote management in a very easy manner and there is no need for a like centralized local manual configuration of a controller 
+-it also provide the best secured protocol and but only the disadvantage here is there will be a cost added to it. 
+-So it is a costly one and there will be a data loss also. 
+-the data is stored in the cloud means the response time will be high. So if we receive the data in slower manner there will be a data loss in the transmission 
+-and also it is dependent on the Internet mainly. So if the Internet goes down means we cannot access the remote resources properly.
+
+
+
+
+
+
+

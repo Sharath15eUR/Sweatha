@@ -1,0 +1,44 @@
+SPLIT MAC :
+
+-Generally, Mac layer is responsible for data transmission, security, encryption and ensuring the quality of service in the Wi-Fi networks.
+
+-But in traditional methods, only the access points are responsible for doing all these in the Mac layer, which will be like a complex one when we have to handle many users or more traffic like that.
+
+-So in split Mac architecture, we have access points and the wireless LAN controller, which is like a centralized device for managing those APs and where APs are responsible for
+handling the device connection to the Wi-Fi and  WLC will be responsible for this security and providing the QoS ,roaming to the users.
+
+-Basically, it splits the Mac layer into two main components, one is AP and the other one is wireless LAN controller in the split Mac architecture.
+So access point handles the real time connection with the device and Wi-Fi ,the packet the data transmission, retransmission and the response times, etc.
+
+-And WLC it is used for like ensuring the security like authorized user checking and the quality
+
+-And if a user wants to move from one AP to another AP, the AP will request the WLC forthe synchronized movement of data.
+so the WLC ensures the seamless transfer between one AP to another AP without losing any disconnection or data of the user.
+
+-In Wi-Fi networks, like if a user wants to connect to the Wi-Fi using a phone or a laptop, the request will be going to the AP.
+
+-And the AP will forward the request to the WLC to handle like if the user is authorized or if there is a secured one transmission like that.
+
+-And the WLC decides whether to allow or block the device upon Wi-Fi in those configurations and the authentication is successful means the WLC will act as a DHCP itself in Wi-Fi
+networks and it will assign a private IP to communicate with that Wi-Fi by the device.
+
+-So basically what it does is, it assigns a private IP to the devices which move on to communicate to that particular Wi-Fi network and if the user wants to access any public
+internet through that Wi-Fi, the Wi-Fi using the network address translation will map the private IP with that public IP of router.
+
+-The WLC itself act as a DHCP server assigning a private IP to the device so that it cancommunicate to that private Wi-Fi network.
+
+
+
+How using an AP improves the performance of Wi-Fi networks:
+
+- using the split-mark architecture we can reduce the overall load on AP.
+-traditionally it is entirely based on the access points which is not that much profitable
+to the user.
+- we will be using APs and WLC in split-mark architecture which reduces the load on APs
+which improves the data transmission very fast and we can like user rooms from one AP
+to another AP.
+-WLC manages the seamless connection between them and we can also ensure a more secured function using the split-mark architecture which essentially managed ensuring more consistency and it is very easy for an admin or a network administrator to configure a single WLC we can configure all the APs that is connected to them instead
+of like administrating one by one APs in the network.
+-So on overall using the split-mark architecture we can reduce the workload on the APs and
+make the AP to seamlessly work for the Wi-Fi connectivity of the device and to transmit
+the data in a faster manner.

@@ -1,0 +1,29 @@
+Sniffer and monitor mode :
+
+
+SNIFFER :
+-It can capture only the packets from the  devices connected to it 
+-In wireless n/w , this mode is limited to only the devices meant to it since the transmision is secured
+-It requires the device to get connected to that wifi 
+-It cannot capture encrypted data in the transmission since its the device private
+-It is mostly used in troubleshooting device conn to the wifi , wifi traffic issues
+--Not used in security testing since packets captured are onl limtes to the devices connected
+-Wireshark is used here to capture
+
+
+USECASE:
+-To test the app from a device in a n/w 
+-to check n/w speed and latency 
+-to check whether the device leaks any private data
+
+MONITOR:
+-IT is used to capture all the wifi packets in the range given
+-It doesn't require the devices to get connected to it , it can capture the packets from not connected devices also 
+-It can also capture encyrpted data
+-It is suitable for security checking sinceit can capture any packets in air and if any unauthorized packet is there it will indicate
+-tools like airmon ng are used in this
+
+USECASE:
+-For study purposes in research 
+-To analyze the n/w traffic and congestion when like packets count are very huge and capturing them 
+-Used mainly in security testing , to check whether there is any hacking , unauthorized packets arrive 

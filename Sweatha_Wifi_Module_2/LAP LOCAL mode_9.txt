@@ -1,0 +1,22 @@
+LAP-LOCAL mode
+
+-In local mdoe LAP [lightweight AP] send every data to wlc through the CAPWAP
+
+-And it cannot do anything by itself and it depends on WLC for device authetication , data traffic handling , data roaming etc
+
+-when wlc goes down , the conn between ap and wlc will fail since it is connected through the local mode of AP
+
+-and then the devices connected to the ap will get disconnected
+
+-the ap will req for a new wlc by sending a discover messsage
+
+-when the client devices wants to connect again , the ap's can't handle the aunthentication too
+
+-the raoming of data is not doen unless the ap is again connected to the wlc
+
+
+HOW IT SOLVES THE WLC FAILURE:
+
+-THe LAP will req new WLC for a specific time if no wlc appeared means , it will go to a standalone local mode
+-Then the LAP continuously req for new wlc after rebooting , if it founds any wlc it automatically switch to that
+-TO solve this problem only , we have studied about the flexconnect mode in AP which works well with or without wlc

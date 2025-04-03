@@ -1,0 +1,25 @@
+CAPWAP :
+
+-It is a protocol that is used to like manage the communication between the access point and the wireless LAN controller.
+-So basically what it does is, it will manage the data transmissions and the security encryption
+-it always works with lightweight APs only , lightweight APs are the access points which has not the capability to work on a independent mode.
+So it depends on the WLC for the Wi-Fi transmission and retransmission of data or anything that happens in the Wi-Fi network.
+-to make the communication between the lightweight APs and the WLC we need a protocol which is secured one to do the process in the Wi-Fi network that is the CAP-UP protocol.
+-CAPWAP provides the centralized secured protocol for the communication and it encapsulates the data that is transmitted between the AP and the WLC for the connectivity between them and it encrypts the data for a more secured purpose and it has separate like tunnels for control and the data traffic.
+-The control data means the management or the secure type of data and the data traffic means the general usual data that we send between the AP and the WLC 
+-the APs can dynamically discover the WLC to connect to that and work.it is done with the help of CAP-UP protocol.
+
+
+communication between AP and WLC:
+
+-So first the AP gets power on and it has to get an IP address to communicate with the CAPWAP to get the WLC connection. So it will get an IP address through the DHCP configuration or static configuration.
+-this AP will look for the WLC and that is also done using any DHCP options or the DNS option and or it can broadcast to the network that it is searching for and WLC like
+to join through the network.
+-So WLC will have to receive the CAPWAP discovery request.
+-The AP will send a CAPWAP discovery request to the WLC and WLC will reply with the discovery response and then after the receiving of discovery response, the AP will then send a join request
+-then the CAP-UP discovery WLC will authenticate the joint request and if it is a secured one then it will send the join response for the AP to connect with that particular WLC.
+-And if that AP is an old one the WLC will also send the updated versions and other configuration  and then the WLC will send their Wi-Fi settings, their SID, their encryption, VLAN etc to the AP.
+-And then the data traffic will be sent and AP encapsulates the data through the CAPWAP data packets and it send it to the WLC and in turn also the WLC will process the data
+and it will send it throughout traffic through the CAPWAP 
+-and the AP will regularly send like heartbeat messages such that it is telling that I am actively connecting to the particular
+WLC.If it loses any connection to the WLC it tries to reconnect to the WLC again.
