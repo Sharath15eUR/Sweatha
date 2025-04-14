@@ -1,0 +1,23 @@
+OFDM AND OFDMA :
+
+OFDM :
+
+-this is used to send the large stream of data into smaller sub streams 
+-each sub stream is sent to subcarriers in the lane 
+-the subcarries are arrnaged in an orthogonal position which avoids overlapping , interference in the data 
+-there won't be any interference here
+-but only one user data can be sent here
+-all the subcarriers are used by only one user
+-no multiuser support , suitable only for downlink that is when a base station server send all the data to particular user at a time 
+-there will be high latency since one suer data is sent at a time and low efficiency
+-used in wifi 4 ,5  
+
+OFDMA :
+
+-this is an adv version of OFDM adding multiple user access to the technique
+-here multiple users can send the data at the same time 
+-subcarriers are shared among multiple users
+-there will be built in multi user support
+-and there will be less latency since data is sent faster of multiple users at same time
+-so there will be better efficiency
+-used in wifi 6 802.11 ax

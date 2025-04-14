@@ -1,0 +1,34 @@
+FREQUENCY BANDS DIVIDED FOR WIFI :
+
+1) 2.4 GHZ
+
+-oldest but the most common type of frequency band 
+-it provides longer range 
+-but data transferred at a slower speed
+-It has interference in the signal 
+-used in browsing mostly in older devices 
+-there are 14 channels in this band (1-14)
+-each channel is 5 MHZ apart but each signal has 22 mhz which make some channel overlap with others
+-channel 1,6,11 are the non overlapping channels
+
+2) 5 GHZ
+
+-it provides shorter range of communication
+-here data is transferred at a faster rate
+-here it provides less interference than 2.4 ghz
+-here channels range from (36-165)
+-used in video streaming , hd calls 
+-here the overlapping of channels will be less compared to 2.4 ghz
+-here dynamic frequency selection (DFS) is needed to prevent overlapping in some channels here
+-dfs is like there will be a specific channel (52) for detecting if there is any radar signal in the band , if it presents we will not transmit the wifi 
+-if the band is free and no radar signal is found , the wifi is transmitted through the band 
+
+3)6 GHZ
+
+-it is the band used in latest wifi 6
+-the data rate is extremely fast 
+-the range is  shorter like inside a same room
+- 59 channels can be used here
+-no overlapping channels will be here and no old devices can be used
+-here the interfernce of signals will be very less
+-no DFS is needed here since no overlapping channels will be present here

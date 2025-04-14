@@ -1,0 +1,28 @@
+OFDM - Orthogonal Frequency Division Multiplexing 
+-IT is a technique where it is a like a multi-carrier modulation technique.
+-So it will divide the available frequency into multiple sub-carriers so that we can do the parallel transmission of data through each sub-carrier and like it maintains the
+orthogonality which means it doesn't interfere with any of the sub-carriers.
+- we can send the data in parallel which means we can send more amount of data at the
+same time without any interference with one another.
+- this is done using the OFDM techniques which is a digital multi-carrier technique
+for sending the data through several parallel streams of sub-carriers 
+
+
+OFDM in WLAN:
+
+-in traditional WLAN methods we do not have any parallel streams to send the data.
+-So we had the interference in many of the like high data speed signals and we also had a problem in multi-path environment so some of the signals may get caught by the walls
+or any subject in the path and to answer all these like disadvantages , we used OFDM technique and how it works is so that will be a data stream which is transmitted by the user.
+- the data stream is splitted into multiple sub-data streams. and are modulated into individual sub-carriers.
+- each sub-stream will be like transmitted through the separate sub-carrier.
+- these sub-carriers are placed mathematically using the orthogonal directions so that no interference between these sub-carriers.
+-it avoids these interference like when we have same frequency also we do not get the interference using this orthogonal technique and the data which is the frequency domain
+data.which is  the data sent on a different frequency .
+-we are going to combine those individual data on different frequencies into a single data so we are converting the frequency domain data into a time-based data which is a single sequence of data.
+-So this process is known as inverse fast fourier transform IFFT and then the single sequence of data single stream of data will be having a buffer to like handle any interference or any collision in the streaming so which is known as cyclic prefix.
+-So it will add a buffer zone to the beginning of the stream to handle any interference and at the receiver side the receiver will be able to do the fast fourier transform to
+get the individual separate data from the single sequence of data.
+- it is the inverse process of the IFFT so it gets the sub-carriers data from the single stream of data and benefits of using OFDM and WLAN.
+- it provides us a best way to do the multipath transmission without any interference or collision or noise and we can do high data rates transmission so we can send more amount of data in a very fast manner 
+-it uses the bandwidth or the frequency in an efficient manner so it places the sub-carriers orthogonal in orthogonal manner to efficiently use the space also.
+-And we also use OFDM in all the Wi-Fi standards and in Wi-Fi 6 we use the advanced technique of OFDM which is the OFDMA.

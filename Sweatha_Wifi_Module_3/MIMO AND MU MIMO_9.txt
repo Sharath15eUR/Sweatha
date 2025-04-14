@@ -1,0 +1,19 @@
+MIMO AND MU-MIMO :
+
+MIMO :
+
+-multiple input and multiple output
+-here the wifi router can send multiple data at the same time through multiple antennas
+-but the data is sent from one device alone 
+-it increase the spped of data from one device
+-for eg if we are sending a large file data means we can use this to send the data in multiple streams to speed up the sending
+-used in wifi 4 
+
+MU-MIMO :
+
+-multi user multiple input and multiple output
+-here we can send multiple data from multiple users at the same time
+-more than one device's data is transmitted here
+-data speed is high and also from multiple devices
+-for eg when we want to download large files from laptop , phone etc at the same time
+-used in wifi 5

@@ -1,0 +1,70 @@
+Modulation Schemes :
+
+-SO basically modulation is the process of modifying the properties of waves so that it can carry our binary data.
+-the raw data will be in binary format in the physical layer and we need to convert it to be carried in a radio wave to be transmitted wirelessly 
+-so to do this we need modulation schemes where we will modify the properties of wave to make it carry the binary data
+
+
+WORKING OF modulation schemes :
+
+-When the data is sent through the phy layer , it will be in the binary form 
+-then the phy layer decides which modulation scheme to use based on the interfernce , noise , signal strength
+-for eg : the data = 1011 , we can use 4 QAM each signal (wave / symbol)can carry 2 bits per sec [10][11]
+-we will be sending these through radio waves 
+-the receiver will demodulate the signal to get the data back 
+
+COMPARISON OF MODULATION SCHEMES :
+
+1) BPSK - binary phase shift keying 
+ -here 1 bit can be transfered per symbol
+ - speed is very low here
+ -but suited for very reliable , long distance tranfer of data
+ -mainly used in 802.11 b
+ 
+ 
+ 2) QPSK - quadrature phase shift keying 
+ -here we can send 2 bits per symbol 
+ -speed is comparatively higher than BPSK 
+ -it is also suitable for relaible communication 
+ -used in 802.11 a/g/n/ac/ax
+ 
+ 
+ 3) QAM - quadrature amplitude modulation 
+ 
+ -higher data rate which means data can be sent faster 
+ -there are various schemes in this QAM
+ 
+ 16 QAM
+ -4 bits can be sent per symbol
+ -used in 802.11 a/g/n/ac
+ 
+ 64 QAM
+ -6 bits can be sent here
+ -used in 802.11 n/ac
+ 
+ 256 QAM 
+ -8 bit can be sent here
+ -used in 802.11 ac
+ 
+ 1024 QAM
+ -10 bits can be sent here
+ -used in 802.11 ax
+ 
+ 4096 QAM
+ -used in 802.11 be
+ -12 bits can be sent here per symbol 
+ - in latest wifi , we are using this 
+ -here range coverage will be very low but much faster than any other schemes
+ 
+ 
+ 
+ WHEN TO USE WHICH SCHEME ?
+ 
+ - if we need high thorughput we have to go for 1024 QAM , 4096QAM 
+ -if signal is weak we can use BPSK , QPSK 
+ 
+ the modulation techniques are chosen by the PHY layer dynamically  per packet .
+ 
+
+
+

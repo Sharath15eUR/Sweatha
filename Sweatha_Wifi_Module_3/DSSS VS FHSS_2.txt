@@ -1,0 +1,27 @@
+DSSS VS FHSS :
+
+
+SPREAD SPECTRUM :
+To make sure we hear the important signals in the noisy area , we use the spread spectrum techniques like DSSS OR FHSS to follow some pattern to make sure the sender and receiver can communicate with the signals in the nosiy wide network.
+
+DSSS: 
+
+-It spreads the signals over a wide area 
+-It send the data along with a chipping code which is the random sequence generated to make the signal secure from the outsiders
+-Like the chipping code will be added to our binary original data and sent to the receiver
+-THe receiver will have the same chipping code to decrypt it 
+-It makes the outsiders very hard to interfere and jam in the signal
+-every bit in original data is multiplied with this chipping code and it will look like a noise for outsiders
+-Used in wifi 802.11 b etc
+-here the chipping code makes the good security
+
+FHSS:
+
+-Here the sender will frequently change their frequency carrier  
+-they will hop from one freq to other in a pattern which is known only to the sender and reciever
+-the data will be sent to one freq for a specific short time which is the dwell time and hops to the next freq 
+- this will be continued so that outsiders can't track this and find the pattern
+-it is very hard to jam in this type of freq spread spectrum
+-Used in bluetooth etc
+-here the hopping pattern makes the good security
+-the receiver have to know the same freq hopping pattern to decrypt the signal

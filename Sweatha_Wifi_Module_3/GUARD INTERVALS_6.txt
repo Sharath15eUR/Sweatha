@@ -1,0 +1,18 @@
+GUARD INTERVALS
+
+-In wlan the data is sent wirelessly .Those data will travel several paths and can face walls , objects and other which make interference ,supress etc 
+-It is received like multiple times at the receiver side because of this nature , so this is called as multipath propagation of data
+-the data will be overlapped here and this is called inter symbol interfernce
+-To avoid this we use Guard intervals there will be a interval between sending one data and other 
+-there are 2 types ,in standard guard interval it is 800 ns  used mostly in noisy environments , but it is quite higher 
+-and we have to wait 800 ns to send next data till the firstly sent data is settled
+-Second type is Short guard interval , which has 400 ns interval and mostly used in cleaner environment with less interference 
+-in SGI we can send more data in same time having high data rate
+
+HOW SGI IMPROVES EFFICIENCY :
+
+-it improves the number of data that can be sent at the same time 
+- and it is sent faster than std interval
+-overall it increases the efficiency by 10 %
+-so here the data can be sent faster and proper , but there should be less interference 
+-used in wifi 4 ,5 , 6 for higher data rates

@@ -1,0 +1,23 @@
+PPDU , PLCP & PMD :
+
+PPDU :
+-phy  protocol data unit 
+-so phy layer is the lowest layer int he stack which actaully transmits the data over the air in wireless network
+-the data is sent through the packts and the entire packet of data which is sent from one device to other in wlan is called ppdu
+-it has preamble , header for data rate specification and the actual data 
+
+
+PLCP :
+-physical layer convergence protocol
+-so this layer is responsible for adding the preamble , header for the packets
+-the preamble is for synchronizing the data bt sender and receiver
+-and the header contains data rate and helps the receiver to know about the data rate , length etc
+-it adds these things and form the ppdu
+
+PMD :
+-this is the physical medium layer used to transmit the final output of data to air 
+-so we can transmit the data only as radio waves in air
+-it converts the digital data to radio waves
+-it chooses frequency, modulation etc fir conversion 
+-and once the data is received it converts back to bits
+
