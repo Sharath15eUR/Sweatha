@@ -2,18 +2,81 @@
 
 1) 802.11 
 
+-freq : 2.4 ghz
+-data rate : 2 mbps 
+-no option for multiple input and output
+-modulation techniques : DSSS , FHSS
+-usage : used in legacy model wlan
+-channel width : 20 MHZ
+
 2)802.11 b
+
+-freq : 2.4 ghz
+-data rate : 11 mbps 
+-no option for multiple input and output
+-modulation techniques :DSSS
+-usage : Basic internet
+-channel width : 20 mhz
 
 3)802.11 g
 
+-freq : 2.4 ghz
+-data rate : 54 mbps 
+-no option for multiple input and output
+-modulation techniques :OFDM + DSSS
+-usage : HOME NETWORKS 
+-channel width :20 MHZ
+
 4)802.11 n
+
+-freq : 2.4 & 5 ghz
+-data rate : 600 mbps 
+-there is a option for multiple input and output
+-modulation techniques : OFDM + MIMO
+-usage : HIGH SPEED HOME / OFFICE
+-channel width : 20 TO 40 Mhz
 
 5)802.11 a
 
+-freq : 5 ghz
+-data rate : 54 mbps 
+-no option for multiple input and output
+-modulation techniques :OFDM
+-usage : office wifi 
+-channel width : 20 MHZ
+
 6)802.11 ax
+
+-freq : 2.4 & 5  ghz
+-data rate : 9.6 Gbps 
+-option for multiple input and output ALONG WITH MULTI USER FEATURE
+-modulation techniques : ofdma , mi-mimo
+-usage : crowded areas
+-channel width : upto 160 mhz
 
 7)802.11 be
 
+-freq : 2.4,5,6 ghz
+-data rate : 46 mbps 
+-option for multiple input and output
+-modulation techniques : ofdma , QAM
+-usage : AR/ VR
+-channel width : 320 MHZ
+
 8)802.11 ad
 
+-freq : 60 ghz
+-data rate : 7 mbps 
+-no option for multiple input and output
+-modulation techniques :ofdm , single carrier
+-usage : short range fast transfer
+-channel width :2.16 ghz
+
 9)802.11 ac
+
+-freq : 5 ghz
+-data rate : 6.9 mbps 
+- option for multiple input and output
+-modulation techniques : ofdm , mi-mimo
+-usage : HD streaming , gaming 
+-channel width : upto 160 mhz

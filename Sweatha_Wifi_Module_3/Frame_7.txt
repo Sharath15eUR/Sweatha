@@ -1,1 +1,27 @@
 Frame :
+
+the phy layer framer has 3 main components:
+
+1) PREAMBLE :
+
+-it helps the receiver to detect and synchronize with the incoming signal and it has several fields to do this :
+	--Short training field STF : it helps in signal detection and give the time for synchronization of data
+	--Long training field LTF : used to fine tune the frequency 
+	--SIG (signal field) : it provide the info about modulation schemes  and it helps the receiver to know about the rest of frames details
+	
+
+2) PHY HEADER :
+
+-it provides data about the decoding part to the receiver .
+-it helps the recevier to decrypt the data from the packet received 
+-it has fields like modulation schemes , length of payload , service field for preserving the future field space and parity bits for error checking 
+-in newer headers it has HT-SIG ,VHT-SIG , HE-SIG fields
+
+3)Data :
+
+-it contains the actual data of the signal
+-it has the mpdu (mac protocol data unit) which is processed by the mac layer 
+-it also has the service , tailer ,padding bits along with mpdu
+-it is encoded and then transmitted further S
+
+

@@ -1,1 +1,12 @@
 DATA RATE :
+
+DR = Channel bandwidth x Modulation efficiency x Coding rate x Number of spatial streams
+Channel BW -- width of the channel that we use ti transmit the data
+Modulation efficiency -- so it tells the bits per symbol in the data
+Coding rate -- it is the freq of error correction
+Spatial streams -- no.of parallel data streams
+For eg:
+80 mhz, 256 qam(2^8),5/6 code rate , 2 spatial streams
+DR= 80x8x5/6x2
+~1066
+

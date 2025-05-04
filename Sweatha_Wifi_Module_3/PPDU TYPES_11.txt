@@ -1,1 +1,12 @@
-PPDU TYPES :
+PPDU (PHYSICAL LAYER PROTOCOL DATA UNIT):
+The basic data unit transmitted over the physical layer-
+TYPES :
+Legacy -- it has basic preamble and payload ,And use simple OFDM based modulation○
+HT PPDU -- it has MIMO feature with HT SIG fields , present in wifi 4○
+VHT PPDU -- it had wider channels and has VHT - SIG A and B fields for user counts , in
+wifi 5
+○
+HE PPDU -- supports OFDMA , MU - MIMO , so it can handle multiple users in one
+transaction
+○
+EHT ppdu -- I t provides multi link operation and more wider channels upto 320 Mhz
