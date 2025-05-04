@@ -1,0 +1,23 @@
+MSDU 
+-MAC service data unit :
+It Is the payload data that is sent from higher layers from the user and passed down to mac 
+layer to get formatted-
+
+MPDU 
+-MAC protocol data unit:
+It is the complete frame including msdu and used to be sent to phy layer alogn with mac 
+headers-
+
+AMSDU(aggregated):
+Multiple msdu are joined to single mpdu in mac layer-
+To reduce overhead and crc check-
+Here single crc for the aggregation-
+
+AMPDU:
+Aggregating multiple mpdu's at the phy layer-
+Each mpdu has own crc and more realible, damaged packets can be sent individually  during 
+retransmission-
+
+AMSDU IN AMPDU:
+Amsdu can be plced inside a ampdu-
+So we can have single error checking feature and large aggreagation at the same time 

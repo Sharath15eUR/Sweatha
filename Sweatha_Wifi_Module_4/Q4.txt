@@ -1,0 +1,17 @@
+SCANNING :
+It is the method where client devices discover the ap points to connect in the wireless 
+environment
+TYPES:
+ACTIVE :
+Client will send active probe req in the channel and waits for probe res from ap's 
+with its capabilities
+The info is then recorded by client and helps in fast discovery
+But high power req, and increase the traffic
+PASSIVE :
+Here the ap's will broadcast a beacon frame which is periodically sent for a client 
+to discover that
+So client have to get into channels and listen for a beacon in that channel to 
+connect  to ap's
+But it is a slower process of discovery since client has to move to subsequent 
+channles if no beacons was found
+But no traffic and less power req  

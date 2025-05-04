@@ -1,0 +1,33 @@
+FUNCTIONS OF MAC LAYERS:
+
+Management frame:
+
+It handles the client association , traffic priority , security management , scanning etc ○
+So ap's will send  beacons that is the presence of ap's is broadcasted periodically
+
+Then the client will do scanning to find an ap :
+
+Active 
+-client will send a probe req with its capabilities and probe res from the ap 
+with its capabilities and client have to choose it further
+
+Passive 
+-the beacons are received by the client with all the ap capabilities in that ▪○
+To verify the authentication and to join the ap , roaming between different ap's○
+The association and disassociation from ap will be handled here 
+
+Control frame:
+
+It is used to control the data flow , access to medium 
+
+Client asks persmission to send data RTS(req to send)and the permission is granted 
+through CTS (clear to send)
+
+To confirm the receipt of frames using ACK
+
+To bloack the frames when already there is a frame in the transmission
+
+Data frame:
+
+It carries the actual data in frames○
+Handle the priority of data type for QoS

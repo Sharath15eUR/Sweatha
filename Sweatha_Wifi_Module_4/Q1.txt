@@ -1,0 +1,25 @@
+MAC LAYER :
+
+-it is a sublayer of data link layer in the open systems interconnect model
+
+-among the 7 layers , mac is presented above the physical layer and below the Logical link 
+control layer which is the next sub layer in Data link layer
+
+-MAC and LLC layer makes the  data link layer in osi model
+
+-It usually controls the access to the physical medium of devices in the network
+
+-So by controlling the access , it prevents collision like more than one device communicating 
+with the medium at same time that can cause interference
+
+-Each device is assigned mac address at this layer to identify the device
+
+-Mac layer creates data  frames which is then passed to the physical layer and to the wireless 
+medium
+
+-It also helps in error detection (crc),flow control , retransmissions of data when ACK  is not 
+received properly
+
+-in wifi , mac layer is responsible for security because of the unique mac address and headers 
+
+-It enables QoS for voicd and file data-1st

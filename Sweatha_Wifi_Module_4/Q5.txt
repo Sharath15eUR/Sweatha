@@ -1,0 +1,12 @@
+CLIENT -ASSOCIATION PROCESS:
+The overall process that happens when client wants to get connected to ap in a network is this 
+client association process-
+There will be various steps:
+
+Scanning ---to find the ap in the n/w by the client 
+○ Both client and ap will have a trust based connection between them
+○ The client -ap association process happens and the association id is generated for the 
+client
+○ After this client can send and receive data 
+○ If we use any authentication method and wpa2/3 is enables we  have to perform that 
+before sending the data  
