@@ -1,0 +1,16 @@
+WIFI 6 VS WIFI 6E
+WIFI 6 WIFI 6E
+It uses 2.4ghz and 5 ghz It uses 6ghz bandwidth
+Comparatively slower data speed and 
+lower capacity than 6EHere due to wider channel there will be high data speed 
+and higher capacity 
+Can support other backward compatible 
+devices tooCannot support other backward compatible devices  , 
+only supports 6ghz band devices
+More interference and congestion 
+compared to 6ELow interfernce and low congestion due to high 
+bandwidth
+Possibility to high latency but it can 
+cover longer rangeLow latency due to wider channels but covers shorter 
+range
+  

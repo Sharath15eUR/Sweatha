@@ -1,0 +1,7 @@
+6GHZ IN WIFI 6E :
+This band provides me more spectrum than 2 or 5 ghz-
+It increases the channels and more wider bandwodth channels-
+Increased the spectrum making the wifi devices to send and receive data more fast-
+There will be low latency and reduced congestion due to wider more channels-
+Supports high bandwidth applications like AR/VR , gaming etc-
+high data rate with low latency 

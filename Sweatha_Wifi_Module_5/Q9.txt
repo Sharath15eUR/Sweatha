@@ -1,0 +1,14 @@
+Fast BSS transition :
+It is used to reduce the time taken for client to move from 
+one basic service set to another during switching bt AP's-
+It is done by avoiding security , QOS process after 
+disconnecting from one AP and then doing these process to 
+connect to another ap-
+so here before the client reconnects with new AP the 
+security and QOS process will be done when it is with the 
+old AP itself to make faster transmission-
+So there will be more faster transactions-
+Ft reduces the shifting dead time during roaming-
+The data will not get dropped anywhere and no pause in 
+data transmission-
+Used in mostly hospitals,universities etc

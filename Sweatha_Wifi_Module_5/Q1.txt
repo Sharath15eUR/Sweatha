@@ -1,0 +1,27 @@
+WIFI 6 
+OFDMA
+--it allows simultaneous data transmission for like many devices same time which 
+improves efficiency 
+-QAM --increased bit per symbol and supports high throughput 
+
+-MU-MIMO --wifi 5 supported MU -MIMO in only the downlink which is from ap to user but 
+here we have it for both uplinka nd downlink-
+
+TWT --scheduling the time to save power -
+Increased Capacity and low latency --useful in crowded areas 
+
+-WIFI 6E
+Here the width is increased to 6GHZ for channels
+
+-The overlapping and congestion are reduced here
+
+-There will be low latency and high speed due to high bandwidth-
+
+WIFI 7
+
+Here the BW is doubled from wifi 6 (320 mhz)
+
+-The data rate is also increased
+-And here we have MLO(multi link operation)which enables devices to send and receive data 
+across multiple channels at same time
+-The latency is very much reduced  

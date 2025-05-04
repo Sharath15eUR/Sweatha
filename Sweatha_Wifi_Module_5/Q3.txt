@@ -1,0 +1,12 @@
+TWT in wifi 6 -IoT
+Here the sender and receiver will sign a negotiate when and how they have to wake up to 
+transmit data -
+In IOT we may have a situation where we have to deal with large data , high power consuming 
+devices ,sensors etc which may consume huge power-
+So when we use TWT in iot we can save a lot of power and only the device wakes up at 
+scheduled times-
+Ans each device has a scheduled time to access the medium avoiding congestion-
+We can manage both trafiic levels high , low-
+We can use any no.of devices when we use TWT In iot to preserve the powers-
+For eg : we can use twt in agriculture sensors to like periodically send data about soil 
+conditions, humdity ,weather etc

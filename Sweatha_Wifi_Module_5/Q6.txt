@@ -1,0 +1,20 @@
+WIFI 7
+Bandwidth is doubled from wifi 6which is 160 mhz in wifi 6 changed to 320 ,hz in wifi 7-
+It increases the data amount in each symbol by using 4k QAM , symbol represents the specific 
+pattern of amplitude and phase in the constellation diagram where the symbols are plotted as 
+points -
+Multi link operation is introduced in wifi 7 which enables user to send data in multiple 
+bandwidth at the same time -
+By using mlo we can send data through various BW according to the type of data -
+For eg , if it is a video it can be given to higher bw , if we are sending larger files then it should 
+be sent in the highest BW of all-
+So it reduces sending all data in a single bw there by lessing congestion , data loss -
+Even if the bw is in usage part of it which is free can be used to transfer data which reduce 
+congestion in dense areas-
+Multiple resource units allows devices to use multiple frequency at same time during 
+transmission-
+RU is the smaller parts in the freq available so we can assign each part of freq separately to 
+user -
+So in prev wifi each device gets one RU only , but in wifi 7 each device can use multiple RU's at 
+same time -
+So if the freq are having interferemce or noise still we can assign the parts which are clean   

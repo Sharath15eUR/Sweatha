@@ -1,0 +1,9 @@
+OFDMA IN WIFI 6:
+AP can communicate with many clients at the same time.-
+Here the channels are divided into smaller subchannels called resource units-
+Each RU can be allocated to each user and they need not to compete with the whole channel -
+It reduces the waiting time -
+Make multiple users to send data at the same time-
+there will be low latency by reducing the congestion of data for better response -
+The qos is enhanced by giving the proper BW to users-
+Useful for crowded environments like stadium , airports 

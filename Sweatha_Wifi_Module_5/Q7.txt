@@ -1,0 +1,9 @@
+MLO -multi link operation
+It enables the users to send or receive data through multiple bandwidth-
+There will be multiple channels for communication of user-
+So we can send data through any channel according to our need-
+At same time , we can send and receive data across multiple links -
+For eg we cans edn video in 2.4 ghz and file transfer in 5 ghz at the same time-
+So the data rate will be very high-
+And if one link is congested or having interference we can use other , which reduces latency-
+   used mostly in gaming , AR/VR,video services  to give a realiable low latency applications

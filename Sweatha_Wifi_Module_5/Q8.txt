@@ -1,0 +1,10 @@
+802.11k
+This standard is used mostly for radio resource management -
+This provides info about the available AP's to clients-
+So that they can use AP's without scanning the entire channel to get available ap to request-
+So users can roam fast without any traial method to find AP-
+802.11v
+It is used to improve wireless n/w management to clients-
+It provides various suggestion to users to save their battery  lifeand n/w performance-
+Ap's will make the clients to move to better ap's-
+Here users roam fast with better efiiciency
