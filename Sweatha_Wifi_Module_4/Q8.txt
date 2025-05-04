@@ -1,0 +1,14 @@
+MAC methodology:
+In Mac every device share the common physical medium so , we should avoid collision by 
+using any access methodology-
+Main methods are ,
+CSMA/CA --collision avoidance , so the device should check before talk . If busy , device 
+has to wait random time
+RTS/CTS(request to send , clear to send) --to solve the problems in sending the data and 
+granting the confirmation
+DCF (distributed coordination function) --here the carrier is sensed both physical and 
+virtual so that we can get positive ack
+PCF(point coordination function): --ap itself will act as the point coordinator to control 
+the data 
+EDCA (enhanced distributed channel access) --This provides priority over the services like 
+prioritizing voice , video data over others

@@ -1,0 +1,20 @@
+POWER SAVING METHODS :
+Saving power is main in wireless n/w since we are using battery-
+TYPES:
+LEGACY --
+here the client will go sleep and wake periodically
+When client sleeps , the ap will buffer the data frames and send it when client 
+wakes up and search for beacon or poll frame is sent from them
+This cant be used for complex applications
+U-APSD (unscheduled automatic power saving delivery)
+Here the client makes a sudden awake if any qos services come and it is done 
+using prioritizing traffic by service period
+And it responds with a buffer of data from ap to client when it is not qos related 
+during sleep
+Used mainly for voip , voice calls
+TWT(target value time):
+Both client and ap will sign a negotiate for specific periodic sleep and wake 
+schedules 
+It makes all the deivces to wake up simultaneously which is the main part in IoT for 
+broadcasting this TWT
+This is the most efficient methods for complex applications especially in IoT   

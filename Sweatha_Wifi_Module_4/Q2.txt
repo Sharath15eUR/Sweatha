@@ -1,0 +1,16 @@
+STRUCTURE OF MAC HEADER 802.11
+
+-Frame control 16 bits --has the info about frame types like management , control , data 
+and other flags
+
+-Duration id 16 bits --total duration of our data transmission for reserving the medium 
+usage
+
+-Address fields 1,2,3 -each 48 bits --receiver addr, sender addr, routing addr 
+
+-Seq cntrl --the seq  number of data in transmission for frame order 
+
+-QOS params --16 bits --for the qos parameters in transmission 
+
+-HT control -32 bits --high throughput features for higher versions 
+  

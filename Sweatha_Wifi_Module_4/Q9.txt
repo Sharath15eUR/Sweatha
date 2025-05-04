@@ -1,0 +1,12 @@
+BLOCK ACK MECHANISM:
+This method is used to send bloack acknolwdgements instead of 
+sending ack for individual packets 
+-So here we send single block ack frame for multiple packets
+-This method produces high throughput 
+-It also reducesprotocol  overload by reducing the ack frames
+-Sender will send a block ack req for the frames that have been sent so 
+far
+-And the recevier replies with a bloack ack listing the frames of data 
+recevied correctly
+-Very useful in bulk data streaming like video streaming
+-This method utilizes the channel efficiently   
