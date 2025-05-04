@@ -1,0 +1,8 @@
+WEP -Insecure :
+WEP is considered insecure mainly because it uses a static encryption key and a weak 
+algorithm called RC4.-
+The key doesn’t change often, and hackers can easily capture some Wi -Fi packets and crack 
+the key using simple tools.-
+On the other hand, WPA2 and WPA3 use much stronger encryption. -
+WPA2 uses AES, and WPA3 uses SAE for better protection. These are hard to crack even if 
+someone tries to guess thepassword. 

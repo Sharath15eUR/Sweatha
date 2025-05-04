@@ -1,0 +1,12 @@
+4 way handshake
+It helps both the client and the access point (AP) to prove that they both have the correct 
+Pairwise Master Key (PMK) without directly sharing it over air-
+The AP sends a random value called ANonce to the client.-
+The client generates another random value called SNonce and uses it along with the 
+PMK(pairwise master key) to create a new key called PTK(pairwise transient key).-
+The client sends the SNonce and a Message Integrity Code (MIC) back to the AP.-
+The AP also generates its own PTK using the same inputs (PMK, ANonce, SNonce).-
+If the MIC sent by the client is correct, the AP knows that the client has the right PMK.-
+The AP then sends its own confirmation message (with GTK) to the client.-
+If the client accepts it and replies, both sides confirm that they have the same PMK, and now 
+they trust each other.   

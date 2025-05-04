@@ -1,0 +1,7 @@
+WPA2:
+WPA2 was introduced to fix the security problems found in WEP and WPA. -
+WEP had very weak encryption, and even WPA (which was like a quick fix) still used the RC4 
+algorithm,only dynamic keys  which wasn’t very strong.-
+So, to give better protection, WPA2 came with a stronger encryption method called AES 
+(Advanced Encryption Standard).-
+This made it much harder for attackers to break into Wi-Finetworks.

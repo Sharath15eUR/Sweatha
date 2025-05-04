@@ -1,0 +1,9 @@
+802.1X is a network access control system. It solves the problem of unauthorized users 
+connecting to the network.-
+It makes sure that only users who are properly authenticated (like with a username and 
+password or a digital certificate) are allowed to access the network-
+It also stop forwarding traffic from the ports untill the user is authenticated -
+It also Stops unknown users from connecting -
+Checks user identity before giving access-
+Works with RADIUS servers and Access Points or Switches-
+Adds a layer of security for wired and wireless networks

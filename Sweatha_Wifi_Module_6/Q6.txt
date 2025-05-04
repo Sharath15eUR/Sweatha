@@ -1,0 +1,10 @@
+PWK in 4way handshake :
+The Pairwise Master Key (PMK) is important in the 4 -way handshake because it’s the 
+foundation of the security process used to generate the keys that will secure the wireless 
+connection between the device  and the access point (AP).-
+The PMK is created either from the user’s password (in WPA2/WPA3) or it can come from an 
+external server if the network is using something like an enterprise setup (RADIUS server).-
+During the 4 -way handshake, the PMK is used by both the AP and the client device to generate 
+unique encryption keys for that session. -
+These keys keep  data safe while it’s being sent over thenetwork by ensuring both have 
+derived same key without passing the key over air

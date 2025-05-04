@@ -1,0 +1,7 @@
+802.1X makes Wi -Fi more secure by making sure only trusted users or devices can connect to 
+the network.-
+When a user tries to connect to Wi -Fi, 802.1X asks for login details (like username and 
+password or certificate) reducing the usage of shared passwords-
+These details are checked using a RADIUS server . If the login is correct, the user is 
+allowed toconnect-
+Uses dynamic encryption keys for each session of user to provide confidentiality of data

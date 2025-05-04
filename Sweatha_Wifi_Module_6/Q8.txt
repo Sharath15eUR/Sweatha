@@ -1,0 +1,8 @@
+If we enter a wrong Wi -Fi password (passphrase), then the client and the access point (router) 
+will not be able to create the same Pairwise Master Key (PMK).-
+Since the PMK is not the same, the keys used to protect the handshake messages (like PTK) 
+will also be different.-
+Because of this mismatch, the handshake will fail-
+The client won't be able to connect to the Wi -Fi -
+The AP will ignore the request and may even temporarily block the device after 
+multiple failed attempts of wrong password

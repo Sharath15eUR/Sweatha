@@ -1,0 +1,7 @@
+AUTHENTICATION:
+Authentication means checking if the person or device trying to connect to the Wi -Fi is 
+allowed or not. It makes sure only trusted users can join the network. For example, when 
+we enter a Wi -Fi password, it is a way of doing authentication.-
+Encryption means hiding the data we send over Wi -Fi so that no one else can read it. Even 
+if someone captures the data, they can’t understand it because it’s scrambled orcoded.-
+Validating who is sending is authentication and protecting the data we send is encryption

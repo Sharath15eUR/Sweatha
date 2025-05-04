@@ -1,0 +1,15 @@
+WEP (Wired Equivalent Privacy):
+This was the first type of Wi -Fi security. It used a key for encryption, but it was very weak and 
+easy to hack. So, it is not safe anymore.-
+WPA (Wi -Fi Protected Access):
+WPA came after WEP to fix its problems. It used TKIP (Temporal Key Integrity Protocol) for 
+better security, but still not strong enough. It was just a temporary improvement of using 
+dynamic keys instead of statric single one-
+WPA2:
+This is much better than WPA. It uses a stronger encryption method called AES (Advanced 
+Encryption Standard) and is more secure. It is still widely used today.-
+WPA3:
+This is the latest and most secure one. It protects even if the Wi -Fi password is weak and adds 
+better security for public Wi -Fi. It uses SAE (Simultaneous Authentication of Equals) instead of 
+the old handshake, which is harder tocrack using any brute force since it eliminates the 
+preshared key option

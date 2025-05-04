@@ -1,0 +1,13 @@
+PILLARS OF WIFI SECURITY:
+The main pillars are,
+1. Authentication
+It makes sure that only trusted  users/devices can connect to n/w and methods are used to validate 
+the identity to make sure unknown user is not accessing
+2. Encryption
+This keeps  data private while it’s being sent over Wi -Fi.
+It scrambles the data so that unknown user cannot read it —even if they capture it.
+3. Integrity
+This ensures the data is not changed or tampered with while being sent bt user and AP
+It checks that the message you sent is the same when it is received.
+4. Access Control
+This decides who can access what onthenetwork
