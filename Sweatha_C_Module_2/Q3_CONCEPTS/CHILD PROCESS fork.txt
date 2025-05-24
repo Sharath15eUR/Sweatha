@@ -1,0 +1,28 @@
+CHILD PROCESS - fork () :
+
+-fork system call will create a child process and have the exact same code , data and counters 
+-the original process is the parent and the new process created by the fork is child which have different memory spaces and they run independently
+-to identify bt the parent and child we use the pid , 
+	--if pid is 0 , it means that is the child process
+	--if pid is a positive number >0  , it means that is the parent process
+	--if pid is <0  , it means that fork is failed and no child process is created 
+-we can also get the current process id using getpid() and parent process id using getppid()
+
+
+WHY WE ARE USING FORK :
+
+-we can run concurrent process in parallel (unix or linux systems)
+-we can use this for running multiple sub process like more client requests in websites etc
+-splitting works into each child so that it wont affect each other
+-background process can be run using fork to make cpu performance more high
+
+
+PARENT PROCESS :
+-mostly it will be used for monitoring , controlling , handling child errors , waiting for child process to complete
+-to create more child process 
+-it must clear all the zombie process
+
+CHILD PROCESS :
+-it can perform some task and run a program individually
+-send the result or output back 
+-must use exit() to end up the child process

@@ -1,0 +1,30 @@
+LOCKING MECHANISM :
+
+Lock :
+-at a time one thread should access a resource , no two threads can access it at same time which is a race condition.
+-this method is to prevent data consistency 
+
+eg:
+
+int var=0;
+thread_1: var=var+1;
+thread_2: var=var+1;
+
+//this makes 2 threads to access the same var at same time which make a race conditon 
+
+TYPES :
+
+-Mutex and spinlock
+-read/write (multiple threads can read but only one can write), semaphore(allowing specific number of access)
+
+MUTEX : (Mutual exclusion)
+
+-it lock is already held and another thread wants to access , it makes that thread to sleep till the lock is free 
+-when releasing the lock will take more time we can use this to reduce the cpu time of the waiting thread by making them sleep
+-we can use mutex in user app 
+
+
+SPINLOCK :
+-if lock is held , the waiting thread spins in loop which makes them busy till the lcok is free
+-we can use this when the lock is held for a shorter time so that it doesnt need to sleep just keeps on checking 
+-we should use spinlock in kernel space where sleep may interrupt the process and waking up a thread is expensive 

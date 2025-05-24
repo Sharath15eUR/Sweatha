@@ -1,0 +1,36 @@
+TIME COMPLEXITY :
+
+-it measures how fast and efficient the algorithm works with respect to input size
+-particularly when it comes to linux and kernels where system stability is more important , it must have an efficient time complexity if algorithms in various feature like process scheduling , file access etc
+-having poor time complexity can affect the whole system and poor performance
+-the areas where time complexity is more needed in linux kernel :
+
+
+	--Process scheduling 
+		-to choose which process to run next , it uses cfs with red black tree for making a balanced process scheduling such that no process is kept starved for long time.
+		-it has o(log n)
+		-Red black tree stores the running tasks acc to their vruntime that is cpu time it has got so far , the least served process will me moved to left and the high cpu time used process to right and it make sure no path is longer compared to others so that tree is balanced and process are well served
+		
+		
+	--sys calls and interrupt handlers
+		-it should be called very fast so O(1)
+	
+	
+	--file system
+		-it uses hashed B trees for file / dir lookup 
+		-Hashed B trees are multi level trees where more child are present reducing depth
+		-it has o(log n)
+		-so we can reduce the number of lookups when we create ,d elete or search a file dir 
+		
+		
+	--memory management
+		-it uses buddy allocator to get the efficient time complexity 
+		-it allocates the m/y divided into blocks of size in powers of 2 
+		-if any block gets free or if any bloack has some fragements free space it will search for free space in the m/w that is search for buddy and it combines with that space
+		-this reduces the internal fragmentation problem as everytime a m/y gets free it combines with its buddy
+		-it has O(log n)
+		
+	
+	--Device drivers 
+		-handles input and output operations 
+		-it has o(1) or o(n) depends on how the driver code is designed

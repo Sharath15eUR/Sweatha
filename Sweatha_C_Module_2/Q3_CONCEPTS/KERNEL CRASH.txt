@@ -1,0 +1,26 @@
+KERNEL CRASH :
+
+-it is a situation where the core of linux os the kernel gets into a panic mode which is not recoverable 
+-it redirects to system reboot , freeze or a blank screen more likely without GUI 
+
+
+CAUSES :
+
+-referencing a NULL pointer
+-using m/y after free()
+-using a false driver to kernel
+-not proper usage of kernel modules
+-race condition where multiple kernel threads accessing the data incorrectly
+
+
+CRASH TYPES :
+
+-kernel Oops -- it is non fatal and can continue after crash and logged in kern.log file inside lib dir
+
+-kernel panic -- it is a fatal error and cannot be recovered so the system has to shutdown or reboot and we will have  black screen withou any GUI 
+
+
+RECOVERY :
+
+- we can use any crash tools to analyze 
+-one such is kdump to capture m/y dump when kernel crashes 

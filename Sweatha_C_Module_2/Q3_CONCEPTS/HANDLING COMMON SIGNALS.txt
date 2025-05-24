@@ -1,0 +1,21 @@
+HANDLING COMMON SIGNALS :
+
+-signals are like a s/w interrupt sent from process to kernel to indicate that something has happened .
+-there are various common signals 
+	-SIGINT 2 -- it handles when user manually interrupt using ctrl+c and it terminates by default and we can catch this signal and handle the signal 
+	-SIGTERM 15 -- it is used to terminate the signal politely , and it terminates the signal 
+	-SIGKILL 9 -- it is used to kill the process without any request and we can't handle this signal
+	-SIGQUIT 3 -- it is caught when user enters ctrl + \ and to quit from keyboard use , terminating the process and saving the memory state
+	-SIGHUP -- it is used when terminals are disconnected , to send a signal to daemon process so that without restarting it can reload the newly updated configuration file 
+	-SIGCHLD 18 or 20 -- it is caught when child process ends to indicate it to the parent so that no zombie process is there and it is ignored by default 
+	-SIGSEGV 11 -- it is caught when user tries to access the invalid memory that is null pointer reference memory and it terminates the process and makes a core dump which is a snapshot of the memory used for debugging .
+	
+	
+	
+HANDLING SIGNALS :
+
+-we can handle the signals after they are caught except for few like SIGKILL etc
+-we can also use sigaction()
+-when we handle the signal we can store the data into a file using write method instead of printf function which is not async one 
+-if any other function is using printf means the handler will not function properly 
+-so for efficient use we must use async functionalities like write, read , alarm ,etc inside signal handler 
